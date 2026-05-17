@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif TC", serif;
+
+  --color-hakka-red: #A64B2A; /* Terracotta */
+  --color-hakka-brown: #2D2926; /* Deep Charcoal */
+  --color-hakka-green: #5A5A40; /* Olive Green */
+  --color-hakka-cream: #F5F2ED; /* Parchment Background */
+  --color-hakka-gold: #D2B48C; /* Accent Gold */
+}
+
+@layer base {
+  body {
+    @apply bg-hakka-cream text-hakka-brown font-sans antialiased;
+  }
+}
+
+.mission-card {
+  @apply relative overflow-hidden rounded-[2.5rem] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 border-b-4 border-hakka-gold/40 bg-white;
+}
+
+.section-title {
+  @apply font-serif text-3xl md:text-5xl lg:text-6xl text-hakka-brown mb-4 text-center leading-tight;
+}
+
+.btn-primary {
+  @apply bg-hakka-red text-white px-8 py-3 rounded-full font-bold hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 shadow-lg;
+}
+
