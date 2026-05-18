@@ -29,7 +29,7 @@ export const Booking = () => {
   };
 
   return (
-    <div className="min-h-screen bg-hakka-cream pt-44 pb-20 px-6">
+    <div className="min-h-screen bg-hakka-cream pt-32 pb-20 px-6">
       <div className="max-w-3xl mx-auto">
         <button onClick={() => navigate(-1)} className="inline-flex items-center gap-2 text-hakka-red font-bold mb-8">
           <ArrowLeft className="w-5 h-5" /> 返回
@@ -51,15 +51,18 @@ export const Booking = () => {
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <label className="block text-sm font-bold text-hakka-brown mb-3 tracking-widest">報名梯次</label>
-                    <select className="w-full p-4 rounded-2xl border border-slate-200 focus:border-hakka-red focus:ring-0 focus:outline-none bg-slate-50" required>
-                      <option>2026/05/20 (六) 桐花篇</option>
-                      <option>2026/05/21 (日) 桐花篇</option>
-                      <option>2026/06/03 (六) 端午篇</option>
+                    <select className="w-full p-4 rounded-2xl border border-slate-200 focus:border-hakka-red focus:ring-0 focus:outline-none bg-slate-50" required defaultValue="">
+                      <option value="" disabled>請選擇梯次</option>
+                      <option>2026/05/23(六) 桐花篇</option>
+                      <option>2026/05/24(日) 桐花篇</option>
+                      <option>2026/05/27(三) 桐花篇</option>
+                      <option>2026/06/06(六)</option>
+                      <option>2026/06/07(日)</option>
                     </select>
                   </div>
                   <div>
                     <label className="block text-sm font-bold text-hakka-brown mb-3 tracking-widest">參與人數</label>
-                    <input type="number" min="2" max="10" placeholder="建議 2~6 人" className="w-full p-4 rounded-2xl border border-slate-200 focus:border-hakka-red focus:outline-none bg-slate-50" required />
+                    <input type="number" className="w-full p-4 rounded-2xl border border-slate-200 focus:border-hakka-red focus:outline-none bg-slate-50" required />
                   </div>
                 </div>
 

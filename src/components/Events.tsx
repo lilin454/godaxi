@@ -33,8 +33,8 @@ export const Events = () => {
       title: "期間限定：大溪四季之謎",
       subtitle: "「跟著季節，解鎖不同的大溪故事」",
       events: [
-        {
-          name: "客家五月雪",
+          {
+          name: "客家五月雪：把春天撿起來！",
           slogan: "「跟著桐花盛開，展開春日客庄冒險」",
           period: "4月底至5月中旬",
           desc: "每年春末初夏，大溪與龍潭山區的油桐花盛開，雪白花瓣覆蓋步道，帶領親子家庭走入客庄山林，感受自然的魅力。",
@@ -70,29 +70,11 @@ export const Events = () => {
           img: "/大龍門鱻漫遊.png"
         }
       ]
-    },
-    {
-      title: "常態冒險：百年傳承任務",
-      subtitle: "「隨時開啟的時光之門」",
-      events: [
-        {
-          name: "大溪封印之謎",
-          slogan: "「解開沈睡百年的文化核心」",
-          period: "全年開放",
-          desc: "五個神秘座標，穿梭於大溪古牆、牌樓與巷弄中，揭開大溪百年繁華背後的真實面貌。",
-          tag: "經典任務",
-          seasonTag: "全年暢玩",
-          badge: "熱門首選",
-          color: "bg-white",
-          accentColor: "text-hakka-red",
-          img: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80"
-        }
-      ]
     }
   ];
 
   return (
-    <div className="min-h-screen pt-44 pb-20 bg-hakka-cream selection:bg-hakka-red/20 font-sans">
+    <div className="min-h-screen pt-32 pb-20 bg-hakka-cream selection:bg-hakka-red/20 font-sans">
       <div className="max-w-7xl mx-auto px-6">
         <header className="mb-20 text-center">
           <motion.div
@@ -129,7 +111,7 @@ export const Events = () => {
                   viewport={{ once: true }}
                   className={`rounded-[3rem] overflow-hidden border border-hakka-gold/10 shadow-xl group hover:shadow-2xl transition-all relative ${event.color}`}
                 >
-                  {event.name === "客家五月雪" && <FallingPetals />}
+                  { (event.name.includes("客家五月雪") || event.name.includes("九月雪")) && <FallingPetals /> }
                   <div className="aspect-[4/3] relative overflow-hidden">
                      <img src={event.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt={event.name} />
                      {event.name === "大龍門鱻漫遊" && (

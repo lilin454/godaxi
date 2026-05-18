@@ -5,10 +5,12 @@ import { Link, useLocation } from "react-router-dom";
 
 export const PuzzleDetail = () => {
   const images = [
-    "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&q=80"
+    "/活動精彩紀錄/活動精彩紀錄1.jpg",
+    "/活動精彩紀錄/活動精彩紀錄2.jpg",
+    "/活動精彩紀錄/活動精彩紀錄3.jpg",
+    "/活動精彩紀錄/活動精彩紀錄4.jpg",
+    "/活動精彩紀錄/活動精彩紀錄5.jpg",
+    "/活動精彩紀錄/活動精彩紀錄6.jpg"
   ];
   const [currentImage, setCurrentImage] = useState(0);
   const location = useLocation();
@@ -32,7 +34,7 @@ export const PuzzleDetail = () => {
   }, [location]);
 
   return (
-    <div className="min-h-screen pt-44 pb-20 bg-hakka-cream selection:bg-hakka-red/20">
+    <div className="min-h-screen pt-32 pb-20 bg-hakka-cream selection:bg-hakka-red/20">
       <div className="max-w-7xl mx-auto px-6">
         <Link to="/" className="inline-flex items-center gap-2 text-hakka-red font-bold mb-12 hover:translate-x-1 transition-transform">
           <ArrowLeft className="w-5 h-5" /> 返回首頁
@@ -66,7 +68,7 @@ export const PuzzleDetail = () => {
               </div>
             </div>
             <div className="rounded-[4rem] overflow-hidden shadow-2xl relative aspect-square border-8 border-white">
-               <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80" className="w-full h-full object-cover" alt="Real game" />
+               <img src="/實境解謎示意圖.png" className="w-full h-full object-cover" alt="Real game" />
             </div>
           </div>
         </section>
@@ -125,9 +127,14 @@ export const PuzzleDetail = () => {
            <div className="relative z-10 flex flex-col items-center">
               <Sparkles className="w-16 h-16 text-hakka-gold mb-6" />
               <h2 className="text-4xl font-serif mb-8 font-black">準備好開始您的冒險了嗎？</h2>
-              <Link to="/booking" className="px-12 py-5 bg-hakka-gold text-hakka-brown rounded-full font-black text-xl hover:scale-110 transition-transform shadow-xl">
-                 立即出發
-              </Link>
+              <div className="flex flex-col gap-4 mb-4 items-center">
+                 <Link to="/story" className="px-12 py-4 bg-white/10 hover:bg-white/20 text-white rounded-full font-black text-lg hover:scale-105 transition-all shadow-lg border border-white/20">
+                    觀看故事序章
+                 </Link>
+                 <Link to="/booking" className="px-12 py-5 bg-hakka-gold text-hakka-brown rounded-full font-black text-xl hover:scale-110 transition-transform shadow-xl">
+                    立即出發
+                 </Link>
+              </div>
            </div>
         </div>
       </div>
@@ -259,7 +266,7 @@ export const FoodDetail = () => {
   };
 
   return (
-    <div className="min-h-screen pt-44 pb-20 bg-white selection:bg-hakka-red/20">
+    <div className="min-h-screen pt-32 pb-20 bg-white selection:bg-hakka-red/20">
       <div className="max-w-7xl mx-auto px-6">
         <Link to="/" className="inline-flex items-center gap-2 text-hakka-red font-bold mb-12 hover:translate-x-1 transition-transform">
           <ArrowLeft className="w-5 h-5" /> 返回首頁
@@ -452,7 +459,7 @@ export const BondingDetail = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-44 pb-20 bg-hakka-cream">
+    <div className="min-h-screen pt-32 pb-20 bg-hakka-cream">
       <div className="max-w-7xl mx-auto px-6">
         <Link to="/" className="inline-flex items-center gap-2 text-hakka-red font-bold mb-12 hover:translate-x-1 transition-transform">
           <ArrowLeft className="w-5 h-5" /> 返回首頁

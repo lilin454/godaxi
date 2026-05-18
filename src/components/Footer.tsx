@@ -27,24 +27,49 @@ export const Footer = () => (
 
         <div>
           <h5 className="font-bold mb-6 text-sm uppercase tracking-widest text-hakka-gold">追蹤冒險</h5>
-          <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-4">
-              <div style={{ width: '95.9861px', height: '94.9861px' }} className="bg-white p-1 rounded-lg flex items-center justify-center">
-                <img src="/IG QR code.png" alt="IG QR Code" style={{ width: '87px', height: '87px' }} className="object-contain" referrerPolicy="no-referrer" />
+          <div className="flex flex-col gap-8">
+            {/* Instagram Section */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                <div style={{ width: '95.9861px', height: '94.9861px' }} className="bg-white p-1 rounded-lg flex items-center justify-center">
+                  <img src="/IG QR code.png" alt="IG QR Code" style={{ width: '87px', height: '87px' }} className="object-contain" referrerPolicy="no-referrer" />
+                </div>
+                <div className="text-sm">
+                  <p className="font-bold">Instagram</p>
+                  <p className="text-white/50">ty.ka_daxi</p>
+                </div>
               </div>
-              <div className="text-sm">
-                <p className="font-bold">Instagram</p>
-                <p className="text-white/50">ty.ka_daxi</p>
-              </div>
+              <a 
+                href="https://www.instagram.com/ty.ka_daxi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-2 text-hakka-gold hover:text-white transition-colors text-sm"
+              >
+                <Instagram className="w-4 h-4" /> 點擊進入官方ＩＧ
+              </a>
             </div>
-            <a 
-              href="https://www.instagram.com/ty.ka_daxi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center gap-2 text-hakka-gold hover:text-white transition-colors text-sm"
-            >
-              <Instagram className="w-4 h-4" /> 點擊進入官方ＩＧ
-            </a>
+
+            {/* LINE Section */}
+            <div className="space-y-4 border-t border-white/10 pt-6">
+              <div className="flex items-center gap-4">
+                <div style={{ width: '95.9861px', height: '94.9861px' }} className="bg-white p-1 rounded-lg flex items-center justify-center">
+                  <img src="/LINE QRcode.jpg" alt="LINE QR Code" style={{ width: '87px', height: '87px' }} className="object-contain" referrerPolicy="no-referrer" />
+                </div>
+                <div className="text-sm">
+                  <p className="font-bold">LINE</p>
+                  <p className="text-white/50">@275oznqg</p>
+                </div>
+              </div>
+              <a 
+                href="https://line.me/R/ti/p/@275oznqg" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center gap-2 text-hakka-gold hover:text-white transition-colors text-sm"
+              >
+                <div className="w-4 h-4 rounded-sm bg-hakka-gold flex items-center justify-center text-[10px] text-hakka-brown font-black">L</div>
+                點擊加入官方LINE帳號
+              </a>
+            </div>
           </div>
         </div>
 

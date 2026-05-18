@@ -17,8 +17,8 @@ export const FAQ = () => {
       title: "價格與優惠",
       icon: <PiggyBank className="w-6 h-6" />,
       items: [
-        { q: "活動價格是多少？", a: "定價為 899元 / 人。" },
-        { q: "有什麼促銷活動嗎？", a: "我們提供多種折扣：\n1. 早鳥優惠：折抵 100元 (899變為799)。\n2. 四人同行一人免費 (買三送一)。\n3. 打卡分享：完成體驗後於 IG 打卡分享，可獲下次體驗 NT$50 折扣。" }
+        { q: "活動價格是多少？", a: "定價為 999元 / 人。" },
+        { q: "有什麼促銷活動嗎？", a: "我們提供多種折扣：\n1. 早鳥優惠：折抵 100元 (999✘➙899)。\n2. 四人同行一人免費 (買三送一)。\n3. 打卡分享：完成體驗後於 IG 打卡分享，可獲下次體驗 NT$50 折扣。" }
       ]
     },
     {
@@ -31,7 +31,7 @@ export const FAQ = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-44 pb-20 bg-hakka-cream selection:bg-hakka-red/20">
+    <div className="min-h-screen pt-32 pb-20 bg-hakka-cream selection:bg-hakka-red/20">
       <div className="max-w-4xl mx-auto px-6">
         <Link to="/" className="inline-flex items-center gap-2 text-hakka-red font-bold mb-12 hover:translate-x-1 transition-transform">
           <ArrowLeft className="w-5 h-5" /> 返回首頁
@@ -86,7 +86,7 @@ export const FAQ = () => {
            <div className="relative z-10">
               <h3 className="text-3xl font-serif font-black mb-6">還有其他問題想聊聊？</h3>
               <p className="text-white/70 mb-10 text-lg">歡迎隨時加入 LINE 官方帳號，我們的冒險守護員會盡快回覆您。</p>
-              <a href="#" className="inline-block bg-hakka-gold text-white px-12 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition-transform">
+              <a href="https://line.me/R/ti/p/@275oznqg" target="_blank" rel="noopener noreferrer" className="inline-block bg-hakka-gold text-white px-12 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition-transform">
                  立即加入 LINE 諮詢
               </a>
            </div>

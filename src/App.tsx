@@ -49,7 +49,7 @@ const translations: any = {
     highlight_food_title: "美食感官體驗",
     highlight_food_desc: "邊玩邊吃，豆干、活魚料理、牛汶水，用味覺加深您的文化記憶。",
     highlight_bonding_title: "服務專區",
-    highlight_bonding_desc: "針對不同需求，提供親子、打卡、大型團體與銀髮長輩的專屬客製服務，安心啟航、萬事包辦！",
+    highlight_bonding_desc: "專為親子協作、網美景點打卡、公司與大型團體場地租借、以及銀髮長輩友善無障礙設施提供最貼心、免除交通與規劃煩憂的尊榮客製服務！",
     cta_text: "「冒險就在家門口，我們一起出發吧！」"
   },
   en: {
@@ -162,7 +162,7 @@ const Nav = () => {
           <img src="/logo.png" alt="桃客大溪" style={{ width: '81.4213px', height: 'auto' }} className="object-contain transition-transform group-hover:scale-110" referrerPolicy="no-referrer" />
           <div className="leading-tight">
             <span className="font-serif text-3xl md:text-4xl font-black text-hakka-red block tracking-tighter shrink-0">桃客大溪</span>
-            <span className="text-[10px] font-bold tracking-[0.2em] text-hakka-green block uppercase whitespace-nowrap">桃園客家代入冒險</span>
+            <span className="text-[10px] font-bold tracking-[0.2em] text-hakka-green block uppercase whitespace-nowrap">桃園客家旅遊實境解謎</span>
           </div>
         </Link>
 
@@ -281,7 +281,7 @@ const Home = () => {
   return (
     <main className="min-h-screen">
       {/* Hero */}
-      <section className="relative min-h-[90vh] pt-44 pb-20 flex items-center overflow-hidden">
+      <section className="relative min-h-[90vh] pt-32 pb-20 flex items-center overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 items-center gap-16 relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -328,7 +328,7 @@ const Home = () => {
               
               <div className="absolute top-1/4 left-1/4 bg-white p-4 rounded-2xl shadow-lg border-b-4 border-orange-200">
                 <span className="text-[10px] text-slate-400 block font-bold mb-1 uppercase tracking-tighter">任務 01</span>
-                <span className="font-serif font-bold text-sm text-hakka-brown">鍾肇政文學園區</span>
+                <span className="font-serif font-bold text-sm text-hakka-brown">鍾肇政文學生活園區</span>
               </div>
               
               <div className="absolute top-1/2 right-1/4 bg-white p-4 rounded-2xl shadow-lg border-b-4 border-orange-200">
@@ -351,83 +351,19 @@ const Home = () => {
         <div className="absolute top-0 right-0 w-1/3 h-full bg-hakka-gold/5 pointer-events-none -z-10"></div>
       </section>
 
-      {/* High-Impact Slogan Banner */}
+      {/* Why Choose Taoke Daxi (Moved here to replace high-impact banner as per user request) */}
       <section className="py-24 bg-hakka-cream border-y border-hakka-red/5 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-hakka-gold/5 rounded-br-[120px] pointer-events-none"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-hakka-red/5 rounded-tl-[160px] pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col items-center"
-          >
-            <Sparkles className="w-12 h-12 text-hakka-gold mb-6 animate-pulse" />
-            <p className="text-hakka-red font-black tracking-widest text-xs uppercase mb-4">最溫柔的親子教育實踐</p>
-            <h2 className="text-4xl md:text-6xl font-serif font-black text-hakka-brown mb-6 leading-tight">
-              「不是大人導小孩，<br className="block md:hidden" />是全家一起解謎」
-            </h2>
-            <div className="w-20 h-1 bg-hakka-gold mb-6 rounded-full"></div>
-            <p className="text-lg md:text-xl text-slate-500 font-medium max-w-2xl leading-relaxed">
-              透過互動任務與文化探索，創造屬於家庭的共同回憶。<br />
-              孩子拉著爸媽跑、爸媽引導孩子思考，讓代際溝通在歡笑中自然深化。
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Highlights Grid */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-12">
-            <Link to="/puzzle" className="block group">
-              <div className="p-12 rounded-[3.5rem] bg-hakka-cream/50 border border-hakka-gold/10 group-hover:bg-hakka-cream transition-all group-hover:shadow-2xl group-hover:-translate-y-2">
-                <div className="w-16 h-16 bg-hakka-red text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-6 transition-transform">
-                  <MapPin className="w-8 h-8" />
-                </div>
-                <h3 className="font-serif text-3xl text-hakka-brown mb-6">{t.highlight_puzzle_title}</h3>
-                <p className="text-slate-500 leading-relaxed mb-6">{t.highlight_puzzle_desc}</p>
-                <div className="flex items-center gap-2 text-hakka-red font-bold">了解更多 <ArrowRight className="w-4 h-4" /></div>
-              </div>
-            </Link>
-
-            <Link to="/food" className="block group">
-              <div className="p-12 rounded-[3.5rem] bg-hakka-red/5 border border-hakka-gold/10 group-hover:bg-hakka-red/10 transition-all group-hover:shadow-2xl group-hover:-translate-y-2">
-                <div className="w-16 h-16 bg-hakka-green text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-6 transition-transform">
-                  <Utensils className="w-8 h-8" />
-                </div>
-                <h3 className="font-serif text-3xl text-hakka-brown mb-6">{t.highlight_food_title}</h3>
-                <p className="text-slate-500 leading-relaxed mb-6">{t.highlight_food_desc}</p>
-                <div className="flex items-center gap-2 text-hakka-red font-bold">查看美食地圖 <ArrowRight className="w-4 h-4" /></div>
-              </div>
-            </Link>
-
-            <Link to="/bonding" className="block group">
-              <div className="p-12 rounded-[3.5rem] bg-hakka-green/5 border border-hakka-gold/10 group-hover:bg-hakka-green/10 transition-all group-hover:shadow-2xl group-hover:-translate-y-2">
-                <div className="w-16 h-16 bg-hakka-brown text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-6 transition-transform">
-                  <Users className="w-8 h-8" />
-                </div>
-                <h3 className="font-serif text-3xl text-hakka-brown mb-6">{t.highlight_bonding_title}</h3>
-                <p className="text-slate-500 leading-relaxed mb-6">{t.highlight_bonding_desc}</p>
-                <div className="flex items-center gap-2 text-hakka-red font-bold">我們的服務 <ArrowRight className="w-4 h-4" /></div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Taoke Daxi */}
-      <section className="py-24 bg-hakka-cream/40 border-t border-hakka-gold/10">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-serif font-black text-hakka-brown mb-4">
-              為什麼選擇桃客大溪？
+              桃客大溪實境解謎
             </h2>
             <p className="text-slate-500 text-base md:text-lg font-medium">
-              不只是旅遊，更是一場深度的感官啟迪之旅
+              不只是旅遊，更是一場參與式的客家文化啟迪之旅
             </p>
           </div>
 
@@ -447,13 +383,13 @@ const Home = () => {
               },
               {
                 title: "美食文化整合",
-                desc: "邊玩邊享用特色滷豆干、牛汶水與客家活魚，讓舌尖美味成為尋寶地圖的一部分。",
+                desc: "邊玩邊享用特色滷豆干、牛汶水與客家活魚料理，讓舌尖美味成為尋寶地圖的一部分。",
                 icon: <Utensils className="w-6 h-6 text-hakka-brown" />,
                 bg: "bg-hakka-brown/5"
               },
               {
                 title: "實體探索包設計",
-                desc: "精美的實體線索探索包，融合傳統工藝卡榫智慧，讓親子動手拼湊出專屬記憶之鑰。",
+                desc: "精美的實體線索探索包，融合傳統工藝智慧，讓親子動手拼湊出專屬記憶之鑰。",
                 icon: <BookOpen className="w-6 h-6 text-hakka-gold" />,
                 bg: "bg-hakka-gold/5"
               }
@@ -475,6 +411,65 @@ const Home = () => {
                 </p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Highlights Grid (Now standard 4-column with Route intro inserted between Puzzle and Food) */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Link to="/puzzle" className="block group">
+              <div className="p-8 rounded-[3rem] h-full bg-hakka-cream/50 border border-hakka-gold/10 group-hover:bg-hakka-cream transition-all group-hover:shadow-2xl group-hover:-translate-y-2 flex flex-col justify-between">
+                <div>
+                  <div className="w-16 h-16 bg-hakka-red text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-6 transition-transform">
+                    <MapPin className="w-8 h-8" />
+                  </div>
+                  <h3 className="font-serif text-3xl text-hakka-brown mb-6 font-black">{t.highlight_puzzle_title}</h3>
+                  <p className="text-slate-500 leading-relaxed mb-6">{t.highlight_puzzle_desc}</p>
+                </div>
+                <div className="flex items-center gap-2 text-hakka-red font-bold">了解更多 <ArrowRight className="w-4 h-4" /></div>
+              </div>
+            </Link>
+
+            <Link to="/route" className="block group">
+              <div className="p-8 rounded-[3.5rem] h-full bg-hakka-gold/5 border border-hakka-gold/15 group-hover:bg-hakka-gold/10 transition-all group-hover:shadow-2xl group-hover:-translate-y-2 flex flex-col justify-between">
+                <div>
+                  <div className="w-16 h-16 bg-hakka-gold text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-6 transition-transform shadow-md">
+                    <Compass className="w-8 h-8" />
+                  </div>
+                  <h3 className="font-serif text-3xl text-hakka-brown mb-6 font-black">{t.highlight_route_title}</h3>
+                  <p className="text-slate-500 leading-relaxed mb-6">{t.highlight_route_desc}</p>
+                </div>
+                <div className="flex items-center gap-2 text-hakka-red font-bold">查看行程介紹 <ArrowRight className="w-4 h-4" /></div>
+              </div>
+            </Link>
+
+            <Link to="/food" className="block group">
+              <div className="p-8 rounded-[3rem] h-full bg-hakka-red/5 border border-hakka-gold/10 group-hover:bg-hakka-red/10 transition-all group-hover:shadow-2xl group-hover:-translate-y-2 flex flex-col justify-between">
+                <div>
+                  <div className="w-16 h-16 bg-hakka-green text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-6 transition-transform">
+                    <Utensils className="w-8 h-8" />
+                  </div>
+                  <h3 className="font-serif text-3xl text-hakka-brown mb-6 font-black">{t.highlight_food_title}</h3>
+                  <p className="text-slate-500 leading-relaxed mb-6">{t.highlight_food_desc}</p>
+                </div>
+                <div className="flex items-center gap-2 text-hakka-red font-bold">查看美食地圖 <ArrowRight className="w-4 h-4" /></div>
+              </div>
+            </Link>
+
+            <Link to="/bonding" className="block group">
+              <div className="p-8 rounded-[3rem] h-full bg-hakka-green/5 border border-hakka-gold/10 group-hover:bg-hakka-green/10 transition-all group-hover:shadow-2xl group-hover:-translate-y-2 flex flex-col justify-between">
+                <div>
+                  <div className="w-16 h-16 bg-hakka-brown text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-6 transition-transform">
+                    <Users className="w-8 h-8" />
+                  </div>
+                  <h3 className="font-serif text-3xl text-hakka-brown mb-6 font-black">{t.highlight_bonding_title}</h3>
+                  <p className="text-slate-500 leading-relaxed mb-6">{t.highlight_bonding_desc}</p>
+                </div>
+                <div className="flex items-center gap-2 text-hakka-red font-bold">我們的服務 <ArrowRight className="w-4 h-4" /></div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

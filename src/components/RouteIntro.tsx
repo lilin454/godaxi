@@ -47,7 +47,7 @@ export const RouteIntro = () => {
       time: "10:00 AM",
       icon: <MapPin className="w-5 h-5 md:w-6 md:h-6" />,
       highlights: ["中壢車站便攜集合", "領取實體精美道具", "全員包車安心啟程"],
-      imageUrl: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80",
+      imageUrl: "/行程景點照片/中壢車站.png",
       tips: "請於 09:50 前抵達集合地點，以確保全體成員順利在 10:00 準時發車喔！"
     },
     {
@@ -60,7 +60,7 @@ export const RouteIntro = () => {
       time: "10:40 AM",
       icon: <Bike className="w-5 h-5 md:w-6 md:h-6" />,
       highlights: ["悠閒水圳單車行", "綠意裡的尋寶任務", "探尋百年農村水利"],
-      imageUrl: "https://images.unsplash.com/photo-1510563800743-aed236490d08?auto=format&fit=crop&q=80",
+      imageUrl: "/行程景點照片/三坑鐵馬道.png",
       tips: "我們會統一準備、租乘安全的單車或協力車，讓大家遊玩得安心又省力！"
     },
     {
@@ -73,7 +73,7 @@ export const RouteIntro = () => {
       time: "12:00 PM",
       icon: <Utensils className="w-5 h-5 md:w-6 md:h-6" />,
       highlights: ["巴洛克雕花牌樓巡禮", "大溪經典老阿伯豆干", "感官味蕾與謎題整合"],
-      imageUrl: "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80",
+      imageUrl: "/大溪老街.jpg",
       tips: "我們為名勝老街留有充足的遊玩與午餐時光，快帶著大家的尋寶食譜出發吧！"
     },
     {
@@ -86,7 +86,7 @@ export const RouteIntro = () => {
       time: "13:30 PM",
       icon: <Layers className="w-5 h-5 md:w-6 md:h-6" />,
       highlights: ["巧奪天工卡榫拆解", "無牆日式老房建築群", "在工藝美學中尋求解答"],
-      imageUrl: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80",
+      imageUrl: "/行程景點照片/大溪木藝生態博物館.png",
       tips: "館內藏有許多精緻手工藝展品與木件，動手闖關時記得溫柔對待展館設施喔！"
     },
     {
@@ -99,7 +99,7 @@ export const RouteIntro = () => {
       time: "15:00 PM",
       icon: <Compass className="w-5 h-5 md:w-6 md:h-6" />,
       highlights: ["多媒體互動數位解謎", "客家歌謠與文學探索", "童趣無窮的影音體驗"],
-      imageUrl: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&0=80",
+      imageUrl: "https://museums.moc.gov.tw/Upload/FrontPhoto/5c5970f0-ce15-4924-9d08-3b7f375b76bf.jpg",
       tips: "展示區擁有很多舒適冷氣房與趣味數位台機，下午造訪再合適不過！"
     },
     {
@@ -112,7 +112,7 @@ export const RouteIntro = () => {
       time: "17:00 PM",
       icon: <BookOpen className="w-5 h-5 md:w-6 md:h-6" />,
       highlights: ["魯冰花文學起點", "古典日式木造宿舍群", "終極秘密揭曉與榮譽加冕"],
-      imageUrl: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80",
+      imageUrl: "https://images.pexels.com/photos/33083212/pexels-photo-33083212.jpeg?_gl=1*ui41vg*_ga*NjQ5NDc2Njg1LjE3Nzg0MzY3NjM.*_ga_8JE65Q40S6*czE3NzkwMTAwNzkkbzYkZzEkdDE3NzkwMTA5ODIkajMyJGwwJGgw",
       tips: "踏上百年日宿舍群需要穿著襪子入內，請遵守館員參觀指引喔！"
     },
     {
@@ -125,7 +125,7 @@ export const RouteIntro = () => {
       time: "18:00 PM",
       icon: <Bus className="w-5 h-5 md:w-6 md:h-6" />,
       highlights: ["包車返程免去開車疲憊", "旅程冒險故事精彩回首", "夥伴溫情交流分享"],
-      imageUrl: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80",
+      imageUrl: "/行程景點照片/遊覽車回程.png",
       tips: "專車預計 30 分鐘即可安全返抵，大夥可以在車上稍作小憩充電。"
     },
     {
@@ -138,29 +138,17 @@ export const RouteIntro = () => {
       time: "18:30 PM",
       icon: <Clock className="w-5 h-5 md:w-6 md:h-6" />,
       highlights: ["安全返回中壢車站", "帶走充實的文化能量", "永遠封存的親子默契"],
-      imageUrl: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&q=80",
+      imageUrl: "/行程景點照片/中壢車站.png",
       tips: "下車時別忘了隨身攜帶您的冒險包道具和特製實體金屬徽章喔，祝大家回程平順！"
     }
   ];
 
   return (
-    <div className="min-h-screen pt-44 pb-24 bg-hakka-cream selection:bg-hakka-red/20 text-slate-800 relative">
-      
-      {/* Absolute Back Button */}
-      <div className="absolute top-8 left-8 z-50">
-        <Link 
-          to="/" 
-          className="inline-flex items-center gap-2 text-hakka-red font-bold hover:translate-x-1 transition-transform group"
-          style={{ marginTop: '100px' }}
-        >
-          <div className="w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md flex items-center justify-center group-hover:bg-hakka-red group-hover:text-white transition-colors">
-            <ArrowLeft className="w-5 h-5" />
-          </div>
-          <span className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm shadow-sm">返回首頁</span>
-        </Link>
-      </div>
-
+    <div className="min-h-screen pt-32 pb-24 bg-hakka-cream selection:bg-hakka-red/20 text-slate-800 relative">
       <div className="max-w-7xl mx-auto px-6">
+        <Link to="/" className="inline-flex items-center gap-2 text-hakka-red font-bold mb-12 hover:translate-x-1 transition-transform">
+          <ArrowLeft className="w-5 h-5" /> 返回首頁
+        </Link>
         
         {/* Header Title Section */}
         <div className="text-center mb-20 max-w-3xl mx-auto">
@@ -187,7 +175,7 @@ export const RouteIntro = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-lg md:text-xl text-slate-600 leading-relaxed font-medium"
           >
-            我們為家長量身規劃了一條「深度文化 x 低疲勞 x 高互動」的解謎時間軸。
+            我們為家庭量身規劃了一條「深度文化 x 低疲勞 x 高互動」的解謎時間軸。
             不只是看景點，而是全家在對話與尋找中，與大溪的泥土、古厝、美食寫下共同對話。
           </motion.p>
         </div>
@@ -197,7 +185,7 @@ export const RouteIntro = () => {
           {[
             { title: "建議出發時間", content: "建議 10:00 從中壢火車站出發，準時發車", icon: <Clock className="text-hakka-red" /> },
             { title: "全程交通服務", content: "全程提供專屬包車交通服務，免除自行開車與轉乘煩憂，輕鬆出行！", icon: <Bus className="text-hakka-green" /> },
-            { title: "適合探索對象", content: "親子家庭(強力推薦!!)、親友出遊、公司團建，所有人同樂", icon: <Heart className="text-hakka-red/80" /> },
+            { title: "適合探索對象", content: "親子家庭(👑強力推薦!!)、親友出遊、公司團建，適合所有人同樂", icon: <Heart className="text-hakka-red/80" /> },
           ].map((item, idx) => (
             <motion.div 
               key={idx}
@@ -391,23 +379,31 @@ export const RouteIntro = () => {
           
           <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center">
             <Sparkles className="text-hakka-gold h-12 w-12 md:h-16 md:w-16 mb-6 animate-pulse" />
-            <h2 className="text-3xl md:text-4xl font-serif font-black mb-6">「不是大人導小孩，是全家一起解謎」</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-black mb-6">「不是大人等小孩，是全家一起解謎！」</h2>
             <p className="text-sm md:text-base text-white/80 leading-relaxed font-bold mb-10">
-              透過互動任務與文化探索，創造屬於家庭的共同回憶。現在就預訂探索包，為週末刻下一段不可磨滅的歡笑旅程！
+              透過互動任務與文化探索，創造屬於家庭的共同回憶。現在就預訂冒險旅程，為週末刻下一段難忘的歡笑旅程！
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
+                <Link 
+                  to="/booking" 
+                  className="btn-primary py-4 px-10 text-lg font-black text-white hover:scale-105 transition-transform shadow-2xl flex items-center justify-center gap-2 cursor-pointer border border-white/10"
+                >
+                  <span>立即預約冒險</span> <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link 
+                  to="/puzzle" 
+                  className="py-4 px-10 text-lg font-bold border-2 border-white/40 hover:border-white text-white hover:bg-white/5 rounded-full transition-all flex items-center justify-center"
+                >
+                  探索實境玩法
+                </Link>
+              </div>
               <Link 
-                to="/booking" 
-                className="btn-primary py-4 px-10 text-lg font-black text-white hover:scale-105 transition-transform shadow-2xl flex items-center justify-center gap-2 cursor-pointer border border-white/10"
+                to="/story" 
+                className="py-3.5 px-10 text-base font-black border border-white/20 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all hover:scale-105 shadow-md flex items-center justify-center"
               >
-                <span>立即預約冒險</span> <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link 
-                to="/puzzle" 
-                className="py-4 px-10 text-lg font-bold border-2 border-white/40 hover:border-white text-white hover:bg-white/5 rounded-full transition-all flex items-center justify-center"
-              >
-                探索實境玩法
+                觀看故事序章
               </Link>
             </div>
           </div>

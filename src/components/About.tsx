@@ -27,17 +27,9 @@ const MindMapNode = ({ position, title, children, color, delay, icon, style }: a
 export const About = () => {
   return (
     <div className="min-h-screen bg-hakka-cream selection:bg-hakka-red/20 relative">
-      {/* Back to Home Button - Absolute Positioned */}
-      <div className="absolute top-8 left-8 z-50">
-        <Link 
-          to="/" 
-          className="inline-flex items-center gap-2 text-hakka-red font-bold hover:translate-x-1 transition-transform group"
-          style={{ marginTop: '100px', paddingLeft: '0px', marginLeft: '-11px', marginRight: '0px', marginBottom: '0px', paddingTop: '0px' }}
-        >
-          <div className="w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md flex items-center justify-center group-hover:bg-hakka-red group-hover:text-white transition-colors">
-            <ArrowLeft className="w-5 h-5" />
-          </div>
-          <span className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm shadow-sm">返回首頁</span>
+      <div className="max-w-7xl mx-auto px-6 pt-32 pb-0 relative z-10">
+        <Link to="/" className="inline-flex items-center gap-2 text-hakka-red font-bold hover:translate-x-1 transition-transform">
+          <ArrowLeft className="w-5 h-5" /> 返回首頁
         </Link>
       </div>
 

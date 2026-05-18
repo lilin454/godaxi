@@ -7,20 +7,20 @@ import { Link } from "react-router-dom";
 const STORIES = [
   {
     id: 1,
-    title: "故事一：大溪的封印之謎",
-    desc: "傳說中，大溪與龍潭的古老記憶被鎖在了五個神祕的座標中...",
+    title: "故事一：尋客行",
+    desc: "揭開大溪與龍潭神祕冒險的序幕...",
     pages: [
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1510672981848-a1c4f1cb5ccf?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1555529369-bc2d56a19141?auto=format&fit=crop&q=80"
+      "/故事序章/1.jpg",
+      "/故事序章/2.jpg",
+      "/故事序章/3.jpg",
+      "/故事序章/4.jpg"
     ],
     missions: [
-      { step: 1, name: "文化啟動", location: "鍾肇政文學園區" },
-      { step: 2, name: "客家之聲", location: "客家文化館" },
-      { step: 3, name: "水圳探索", location: "三坑鐵馬道" },
-      { step: 4, name: "味覺記憶", location: "大溪老街" },
-      { step: 5, name: "最終解鎖", location: "木藝生態博物館" }
+      { step: 1, name: "大溪傳說", location: "鍾肇政文學園區" },
+      { step: 2, name: "線索顯現", location: "客家文化館" },
+      { step: 3, name: "座標發掘", location: "三坑鐵馬道" },
+      { step: 4, name: "冒險開端", location: "大溪老街" },
+      { step: 5, name: "踏上冒險之路", location: "木藝生態博物館" }
     ]
   },
   { id: 2, title: "故事二：消失的桐花信使 (即將開啟)", desc: "尋找在山林間迷路的傳說生物...", pages: [], locked: true },
@@ -59,7 +59,7 @@ export const StoryIntro = () => {
   };
 
   return (
-    <div className="min-h-screen bg-hakka-brown pt-44 pb-20 px-6">
+    <div className="min-h-screen bg-hakka-brown pt-32 pb-20 px-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="section-title text-white mb-20">冒險序章故事選單</h1>
         
@@ -109,21 +109,21 @@ export const StoryIntro = () => {
               <X className="w-8 h-8" />
             </button>
 
-            <div className="max-w-5xl w-full">
+            <div className="max-w-2xl w-full">
               {!showEndAction ? (
-                <div className="relative aspect-[3/4] md:aspect-video bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col">
-                   <div className="flex-1 relative overflow-hidden">
+                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col">
+                   <div className="relative aspect-square overflow-hidden bg-slate-50">
                       <motion.img
                         key={currentPage}
                         initial={{ x: 300, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         exit={{ x: -300, opacity: 0 }}
                         src={selectedStory.pages[currentPage]}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-12 text-white">
-                         <p className="text-xl font-bold mb-2">頁面 {currentPage + 1} / {selectedStory.pages.length}</p>
-                         <p className="opacity-80">故事緩緩展開... 點擊右側繼續探索。</p>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
+                         <p className="text-lg font-bold mb-1 font-mono">PAGE {currentPage + 1} / {selectedStory.pages.length}</p>
+                         <p className="opacity-80 text-sm">點擊按鈕探索故事細節</p>
                       </div>
                    </div>
                    
