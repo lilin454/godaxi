@@ -3,31 +3,135 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X, ChevronRight, ChevronLeft, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const STORIES = [
-  {
-    id: 1,
-    title: "故事一：尋客行",
-    desc: "揭開大溪與龍潭神祕冒險的序幕...",
-    pages: [
-      "/故事序章/1.jpg",
-      "/故事序章/2.jpg",
-      "/故事序章/3.jpg",
-      "/故事序章/4.jpg"
-    ],
-    missions: [
-      { step: 1, name: "大溪傳說", location: "鍾肇政文學園區" },
-      { step: 2, name: "線索顯現", location: "客家文化館" },
-      { step: 3, name: "座標發掘", location: "三坑鐵馬道" },
-      { step: 4, name: "冒險開端", location: "大溪老街" },
-      { step: 5, name: "踏上冒險之路", location: "木藝生態博物館" }
-    ]
-  },
-  { id: 2, title: "故事二：消失的桐花信使 (即將開啟)", desc: "尋找在山林間迷路的傳說生物...", pages: [], locked: true },
-  { id: 3, title: "故事三：大圳守護者 (即將開啟)", desc: "面對水資源爭奪的家族秘辛...", pages: [], locked: true }
-];
+import { useTranslation } from "../App";
 
 export const StoryIntro = () => {
+  const { lang, t } = useTranslation();
+
+  const storyTranslations: any = {
+    "zh-TW": {
+      title: "冒險序章故事選單",
+      start: "開啟序章",
+      locked: "即將開啟",
+      page: "頁次",
+      prev: "上一頁",
+      next: "下一頁",
+      end_title: "完。待續",
+      final_title: "未完待續...",
+      final_desc: "後續的故事，需要你與家人一同前往現場解開。",
+      final_btn: "開啟冒險旅程",
+      story1_title: "故事一：尋客行",
+      story1_desc: "揭開大溪與龍潭神祕冒險的序幕...",
+      story2_title: "故事二：消失的桐花信使",
+      story2_desc: "尋找在山林間迷路的傳說生物...",
+      story3_title: "故事三：大圳守護者",
+      story3_desc: "面對水資源爭奪的家族秘辛...",
+      m1: "大溪傳說",
+      m2: "線索顯現",
+      m3: "座標發掘",
+      m4: "冒險開端",
+      m5: "踏上冒險之路",
+      explore: "點擊按鈕探索故事細節"
+    },
+    "zh-CN": {
+      title: "冒险序章故事菜单",
+      start: "开启序章",
+      locked: "即将开启",
+      page: "页次",
+      prev: "上一页",
+      next: "下一页",
+      end_title: "完。待续",
+      final_title: "未完待续...",
+      final_desc: "后续的故事，需要你与家人一同前往现场解开。",
+      final_btn: "开启冒险旅程",
+      story1_title: "故事一：寻客行",
+      story1_desc: "揭开大溪与龙潭神秘冒险的序幕...",
+      story2_title: "故事二：消失的桐花信使",
+      story2_desc: "寻找在山林间迷路的传说生物...",
+      story3_title: "故事三：大圳守护者",
+      story3_desc: "面对水资源争夺的家族秘辛...",
+      m1: "大溪传说",
+      m2: "线索显现",
+      m3: "坐标发掘",
+      m4: "冒险开端",
+      m5: "踏上冒险之路",
+      explore: "点击按钮探索故事细节"
+    },
+    "en": {
+      title: "Story Prologue Menu",
+      start: "Start Prologue",
+      locked: "Coming Soon",
+      page: "Page",
+      prev: "Prev",
+      next: "Next",
+      end_title: "To be continued",
+      final_title: "To be continued...",
+      final_desc: "The rest of the story needs to be solved at the site with your family.",
+      final_btn: "Start Adventure",
+      story1_title: "Story 1: Seeking Hakka",
+      story1_desc: "Opening the mysterious adventure of Daxi and Longtan...",
+      story2_title: "Story 2: Lost Tung Blossom Messenger",
+      story2_desc: "Looking for legendary creatures lost in the forest...",
+      story3_title: "Story 3: Canal Guardians",
+      story3_desc: "Facing family secrets of water resource competition...",
+      m1: "Daxi Legend",
+      m2: "Clue Arises",
+      m3: "Coords Found",
+      m4: "Adventure Start",
+      m5: "On the Road",
+      explore: "Click buttons to explore story details"
+    },
+    "vi": {
+      title: "Danh sách câu chuyện mở đầu",
+      start: "Mở đầu câu chuyện",
+      locked: "Sắp ra mắt",
+      page: "Trang",
+      prev: "Trang trước",
+      next: "Trang sau",
+      end_title: "Hết. Còn tiếp",
+      final_title: "Chưa kết thúc...",
+      final_desc: "Phần còn lại của câu chuyện cần bạn và gia đình cùng đến hiện trường để giải đáp.",
+      final_btn: "Bắt đầu hành trình",
+      story1_title: "Truyện 1: Hành trình tìm Hakka",
+      story1_desc: "Mở màn cho cuộc phiêu lưu bí ẩn tại Daxi và Longtan...",
+      story2_title: "Truyện 2: Sứ giả hoa Tung mất tích",
+      story2_desc: "Tìm kiếm sinh vật huyền thoại bị lạc trong rừng...",
+      story3_title: "Truyện 3: Người bảo vệ kênh đào",
+      story3_desc: "Đối mặt với bí mật gia tộc về tranh chấp nguồn nước...",
+      m1: "Truyền thuyết Daxi",
+      m2: "Manh mối lộ diện",
+      m3: "Tìm thấy tọa độ",
+      m4: "Khởi đầu phiêu lưu",
+      m5: "Lên đường phiêu lưu",
+      explore: "Nhấp vào nút để khám phá chi tiết câu chuyện"
+    }
+  };
+
+  const st = storyTranslations[lang] || storyTranslations["zh-TW"];
+
+  const STORIES = [
+    {
+      id: 1,
+      title: st.story1_title,
+      desc: st.story1_desc,
+      pages: [
+        "/Public/故事序章/1.jpg",
+        "/Public/故事序章/2.jpg",
+        "/Public/故事序章/3.jpg",
+        "/Public/故事序章/4.jpg"
+      ],
+      missions: [
+        { step: 1, name: st.m1, location: "鍾肇政文學園區" },
+        { step: 2, name: st.m2, location: "客家文化館" },
+        { step: 3, name: st.m3, location: "三坑鐵馬道" },
+        { step: 4, name: st.m4, location: "大溪老街" },
+        { step: 5, name: st.m5, location: "木藝生態博物館" }
+      ]
+    },
+    { id: 2, title: st.story2_title, desc: st.story2_desc, pages: [], locked: true },
+    { id: 3, title: st.story3_title, desc: st.story3_desc, pages: [], locked: true }
+  ];
+
   const [selectedStory, setSelectedStory] = useState<null | typeof STORIES[0]>(null);
   const [currentPage, setCurrentPage] = useState(0);
   const [showEndAction, setShowEndAction] = useState(false);
@@ -59,9 +163,9 @@ export const StoryIntro = () => {
   };
 
   return (
-    <div className="min-h-screen bg-hakka-brown pt-32 pb-20 px-6">
+    <div className="min-h-screen bg-hakka-brown pt-28 pb-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <h1 className="section-title text-white mb-20">冒險序章故事選單</h1>
+        <h1 className={`section-title text-white mb-20 ${lang === 'en' || lang === 'vi' ? 'text-4xl md:text-6xl' : 'text-5xl md:text-6xl'}`}>{st.title}</h1>
         
         <div className="grid md:grid-cols-3 gap-8">
           {STORIES.map(story => (
@@ -81,12 +185,12 @@ export const StoryIntro = () => {
               </p>
               {!story.locked && (
                 <div className="flex items-center gap-2 text-hakka-red font-bold text-sm">
-                  開啟序章 <ChevronRight className="w-4 h-4" />
+                  {st.start} <ChevronRight className="w-4 h-4" />
                 </div>
               )}
               {story.locked && (
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                  <span className="text-white font-bold tracking-widest bg-black/50 px-4 py-2 rounded-full">即將開啟</span>
+                  <span className="text-white font-bold tracking-widest bg-black/50 px-4 py-2 rounded-full">{st.locked}</span>
                 </div>
               )}
             </motion.div>
@@ -122,30 +226,18 @@ export const StoryIntro = () => {
                         className="w-full h-full object-contain"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
-                         <p className="text-lg font-bold mb-1 font-mono">PAGE {currentPage + 1} / {selectedStory.pages.length}</p>
-                         <p className="opacity-80 text-sm">點擊按鈕探索故事細節</p>
+                         <p className="text-lg font-bold mb-1 font-mono">{st.page} {currentPage + 1} / {selectedStory.pages.length}</p>
+                         <p className="opacity-80 text-sm">{st.explore}</p>
                       </div>
                    </div>
                    
                    <div className="p-6 bg-white flex justify-between items-center border-t border-slate-100">
                       <button onClick={prevPage} disabled={currentPage === 0} className="flex items-center gap-2 font-bold disabled:opacity-30">
-                        <ChevronLeft /> 上一頁
+                        <ChevronLeft /> {st.prev}
                       </button>
                       
-                      {/* Integrated Missions Map Preview */}
-                      <div className="hidden lg:flex items-center gap-4 text-xs font-bold text-slate-400">
-                        {selectedStory.missions.map(m => (
-                          <div key={m.step} className={`flex items-center gap-1 ${currentPage >= m.step - 1 ? "text-hakka-red" : ""}`}>
-                            <div className={`w-4 h-4 rounded-full flex items-center justify-center border ${currentPage >= m.step - 1 ? "bg-hakka-red text-white" : ""}`}>
-                              {m.step}
-                            </div>
-                            <span>{m.name}</span>
-                          </div>
-                        ))}
-                      </div>
-
                       <button onClick={nextPage} className="flex items-center gap-2 font-bold text-hakka-red">
-                        {currentPage === selectedStory.pages.length - 1 ? "完。待續" : "下一頁"} <ChevronRight />
+                        {currentPage === selectedStory.pages.length - 1 ? st.end_title : st.next} <ChevronRight />
                       </button>
                    </div>
                 </div>
@@ -153,10 +245,10 @@ export const StoryIntro = () => {
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-center py-20 bg-hakka-cream rounded-[4rem] shadow-2xl"
+                  className="text-center py-20 bg-hakka-cream rounded-[4rem] shadow-2xl px-6"
                 >
-                  <h2 className="text-5xl font-serif text-hakka-brown mb-8">未完待續...</h2>
-                  <p className="text-xl text-slate-500 mb-12">後續的故事，需要你與家人一同前往現場解開。</p>
+                  <h2 className="text-4xl md:text-5xl font-serif text-hakka-brown mb-8">{st.final_title}</h2>
+                  <p className="text-xl text-slate-500 mb-12">{st.final_desc}</p>
                   
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -164,7 +256,7 @@ export const StoryIntro = () => {
                     transition={{ delay: 0.5 }}
                   >
                     <Link to="/booking" className="btn-primary text-xl px-12 py-5 transform scale-110">
-                      開啟冒險旅程
+                      {st.final_btn}
                     </Link>
                   </motion.div>
                 </motion.div>

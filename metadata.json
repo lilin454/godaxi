@@ -2,5 +2,5 @@
   "name": "桃客大溪冒險 - 親子實境解謎 網頁版",
   "description": "一場讓全家一起解開的客家冒險。結合大溪文化IP與故事主線，帶領家長與孩子走進客家故事世界。",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

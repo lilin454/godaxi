@@ -14,7 +14,12 @@ import { RouteIntro } from "./components/RouteIntro";
 import { FAQ } from "./components/FAQ";
 import { EventDetail } from "./components/EventDetail";
 
-const LanguageContext = createContext({ lang: "zh", setLang: (l: string) => {} });
+const LanguageContext = createContext({ lang: "zh-TW", setLang: (l: string) => {} });
+
+export const useTranslation = () => {
+  const { lang } = useContext(LanguageContext);
+  return { t: translations[lang] || translations["zh-TW"], lang };
+};
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -26,7 +31,7 @@ function ScrollToTop() {
 }
 
 const translations: any = {
-  zh: {
+  "zh-TW": {
     story: "故事序章",
     puzzle: "實境解謎",
     route: "行程介紹",
@@ -35,7 +40,7 @@ const translations: any = {
     faq: "常見QA",
     about: "認識我們",
     booking: "我要報名！！",
-    hero_badge: ["#桃園一日遊", "#實境解謎", "#親子解謎首選"],
+    hero_badge: ["#桃園一日遊", "#實境解謎", "#親子親子首選"],
     hero_title_1: "一場讓全家",
     hero_title_2: "一起解開的",
     hero_title_3: "客家冒險",
@@ -50,85 +55,245 @@ const translations: any = {
     highlight_food_desc: "邊玩邊吃，豆干、活魚料理、牛汶水，用味覺加深您的文化記憶。",
     highlight_bonding_title: "服務專區",
     highlight_bonding_desc: "專為親子協作、網美景點打卡、公司與大型團體場地租借、以及銀髮長輩友善無障礙設施提供最貼心、免除交通與規劃煩憂的尊榮客製服務！",
-    cta_text: "「冒險就在家門口，我們一起出發吧！」"
+    cta_text: "「冒險就在家門口，我們一起出發吧！」",
+    why_title: "桃客大溪實境解謎",
+    why_subtitle: "不只是旅遊，更是一場參與式的客家文化啟迪之旅",
+    f1_title: "深度故事世界觀",
+    f1_desc: "將客家歷史、魯冰花等文學記憶融入解謎故事，打造極具情懷的沉浸冒險。",
+    f2_title: "LINE Bot 輔助解謎",
+    f2_desc: "數位科技與老街地景結合，手機引導精采劇情，讓解密冒險隨時展開。",
+    f3_title: "美食文化整合",
+    f3_desc: "邊玩邊享用特色滷豆干、牛汶水與客家活魚料理，讓舌尖美味成為尋寶地圖的一部分。",
+    f4_title: "實體探索包設計",
+    f4_desc: "精美的實體線索探索包，融合傳統工藝智慧，讓親子動手拼湊出專屬記憶之鑰。",
+    more: "了解更多",
+    view_route: "查看行程介紹",
+    view_food: "查看美食地圖",
+    our_service: "我們的服務",
+    footer_title: "桃客大溪冒險",
+    footer_desc: "這不只是旅遊，而是一段探索文化的冒險。讓全家在解謎中看見客家文化的豐厚與美好。",
+    footer_contact: "聯絡資訊",
+    footer_org: "主辦單位：桃客大溪創意行銷公司",
+    footer_follow: "追蹤冒險",
+    footer_ig: "點擊進入官方ＩＧ",
+    footer_line: "點擊加入官方LINE帳號",
+    footer_terms: "服務條款",
+    footer_privacy: "隱私權政策與保險使用條款",
+    footer_refund: "退費規定說明",
+    footer_safety: "活動安全指南",
+    footer_copy: "© 2026 桃客大溪創意行銷公司 × 中原大學資訊管理系 ALL RIGHTS RESERVED.",
+    about_back: "返回首頁",
+    about_title: "認識桃客大溪",
+    about_slogan: "「以客家文化為世界觀的親子實境解謎旅程」",
+    about_intro: "讓旅行，不只是走訪，而是一場共同完成的冒險。",
+    about_what_is: "桃客大溪是什麼？",
+    about_what_is_p1: "桃客大溪是一個結合「客家文化」、「親子旅遊」與「實境解謎」的沉浸式一日遊品牌。",
+    about_what_is_p2: "我們以桃園大溪與龍潭為舞台，串聯在地景點、美食與文化故事，透過互動任務與解謎體驗，讓旅客在探索中認識客家文化，也留下屬於家庭與朋友之間的共同回憶。",
+    about_what_is_p3: "我們相信，文化不該只是被閱讀，而是能被親身感受與體驗。",
+    about_immersive: "沉浸式共同探索",
+    about_philosophy_title: "我們想帶來的，不只是旅行",
+    about_philosophy_p1: "桃客大溪希望透過創新的旅遊方式，讓更多人重新認識桃園的客家文化。",
+    about_philosophy_p2: "我們期待，每一場解謎旅程，都能成為家人、朋友之間最真實且難忘的共同回憶。",
+    about_cta_title: "準備好開始您的冒險了嗎？",
+    about_cta_btn: "立即開啟冒險旅程"
+  },
+  "zh-CN": {
+    story: "故事序章",
+    puzzle: "实境解谜",
+    route: "行程介绍",
+    food: "美食地图",
+    events: "主题活动",
+    faq: "常见QA",
+    about: "认识我们",
+    booking: "我要报名！！",
+    hero_badge: ["#桃园一日游", "#实境解谜", "#亲子优选"],
+    hero_title_1: "一场让全家",
+    hero_title_2: "一起解开的",
+    hero_title_3: "客家冒险",
+    hero_desc: "“我们卖的不是解谜，是一段亲子共同完成的回忆。”走进大溪与龙潭的街廓，找回被封印的文化碎片。",
+    hero_btn_1: "开启冒险任务",
+    hero_btn_2: "观看故事序章",
+    highlight_puzzle_title: "实境解谜之旅",
+    highlight_puzzle_desc: "不是走马看花，是全家一起在老街、水圳中寻找线索、解开任务。",
+    highlight_route_title: "景点与行程",
+    highlight_route_desc: "精选三坑铁马道、客家文化馆、大溪老街、木博馆等精华地标，提供包车服务，免除交通烦忧！",
+    highlight_food_title: "美食感官体验",
+    highlight_food_desc: "边玩边吃，豆干、活鱼料理、牛汶水，用味觉加深您的文化记忆。",
+    highlight_bonding_title: "服务专区",
+    highlight_bonding_desc: "专为亲子协作、网红景点打卡、公司与大型团体场地租赁、以及银发长辈友好无障碍设施提供最贴心定制服务！",
+    cta_text: "“冒险就在家门口，我们一起出发吧！”",
+    why_title: "桃客大溪实境解谜",
+    why_subtitle: "不只是旅游，更是一场参与式的客家文化启迪之旅",
+    f1_title: "深度故事世界观",
+    f1_desc: "将客家历史、鲁冰花等文学记忆融入解谜故事，打造极具情怀的沉浸冒险。",
+    f2_title: "LINE Bot 辅助解谜",
+    f2_desc: "数字科技与老街地景结合，手机引导精彩剧情，让解密冒险随时展开。",
+    f3_title: "美食文化整合",
+    f3_desc: "边玩边享用特色卤豆干、牛汶水与客家活鱼料理，让舌尖美味成为寻宝地图的一部分。",
+    f4_title: "实体探索包设计",
+    f4_desc: "精美的实体线索探索包，融合传统工艺智慧，让亲子动手拼凑出专属记忆之钥。",
+    more: "了解更多",
+    view_route: "查看行程介绍",
+    view_food: "查看美食地图",
+    our_service: "我们的服务",
+    footer_title: "桃客大溪冒险",
+    footer_desc: "这不只是旅游，而是一段探索文化的冒险。让全家在解谜中看见客家文化的丰厚与美好。",
+    footer_contact: "联络信息",
+    footer_org: "主办单位：桃客大溪创意营销公司",
+    footer_follow: "追踪冒险",
+    footer_ig: "点击进入官方ＩＧ",
+    footer_line: "点击加入官方LINE账号",
+    footer_terms: "服务条款",
+    footer_privacy: "隐私政策与保险使用条款",
+    footer_refund: "退款规定说明",
+    footer_safety: "活动安全指南",
+    footer_copy: "© 2026 桃客大溪创意营销公司 × 中原大学信息管理系 ALL RIGHTS RESERVED.",
+    about_back: "返回首页",
+    about_title: "认识桃客大溪",
+    about_slogan: "“以客家文化为世界观的亲子实境解谜旅程”",
+    about_intro: "让旅行，不只是走访，而是一场共同完成的冒险。",
+    about_what_is: "桃客大溪是什么？",
+    about_what_is_p1: "桃客大溪是一个结合“客家文化”、“亲子旅游”与“实境解谜”的沉浸式一日游品牌。",
+    about_what_is_p2: "我们以桃园大溪与龙潭为舞台，串联在地景点、美食与文化故事，通过互动任务与解谜体验，让旅客在探索中认识客家文化，也留下属于家庭与朋友之间的共同回忆。",
+    about_what_is_p3: "我们相信，文化不该只是被阅读，而是能被亲身感受与体验。",
+    about_immersive: "沉浸式共同探索",
+    about_philosophy_title: "我们想带来的，不只是旅行",
+    about_philosophy_p1: "桃客大溪希望通过创新的旅游方式，让更多人重新认识桃园的客家文化。",
+    about_philosophy_p2: "我们期待，每一场解谜旅程，都能成为家人、朋友之间最真实且难忘的共同回忆。",
+    about_cta_title: "准备好开始您的冒险了吗？",
+    about_cta_btn: "立即开启冒险旅程"
   },
   en: {
-    story: "Story Prologue",
-    puzzle: "Real-life Puzzle",
+    story: "Prologue",
+    puzzle: "Puzzle",
     route: "Itinerary",
     food: "Food Map",
-    events: "Themed Events",
+    events: "Events",
     faq: "FAQ",
-    about: "About Us",
-    booking: "Register Now!!",
-    hero_badge: ["#FamilyTopPick"],
-    hero_title_1: "An Adventure for",
-    hero_title_2: "the Whole Family",
-    hero_title_3: "Hakka Quest",
-    hero_desc: " 'What we sell is not a puzzle, but a memory completed by the family.' Walk into the streets of Daxi and Longtan, and find the sealed cultural fragments.",
+    about: "About",
+    booking: "Book Now!",
+    hero_badge: ["#DayTrip", "#LivePuzzle", "#FamilyChoice"],
+    hero_title_1: "A Family",
+    hero_title_2: "Adventure to",
+    hero_title_3: "Unlock Hakka",
+    hero_desc: " 'What we sell is not just a puzzle, but a family memory.' Step into the streets of Daxi and Longtan to retrieve sealed cultural fragments.",
     hero_btn_1: "Start Mission",
     hero_btn_2: "Watch Prologue",
     highlight_puzzle_title: "Puzzle Journey",
-    highlight_puzzle_desc: "Not just sightseeing; work with your family to find clues and solve missions in old streets and canals.",
-    highlight_route_title: "Spots & Itinerary",
-    highlight_route_desc: "Explore top cultural locations including old streets, bicycle trails, and museums with full-journey chartered bus.",
-    highlight_food_title: "Food Sensory Exp",
-    highlight_food_desc: "Eat while playing. Dried tofu, steamed fish, Niu Wen Shui—deepen your cultural memory with taste.",
+    highlight_puzzle_desc: "Not just sightseeing; work with your family to find clues and solve missions in old streets.",
+    highlight_route_title: "Route & Spots",
+    highlight_route_desc: "Explore top cultural spots like old streets and museums with stress-free chartered bus travel!",
+    highlight_food_title: "Food Sensory",
+    highlight_food_desc: "Eat while playing. Dried tofu, fish dishes, and mochi—deepen your cultural memory with taste.",
     highlight_bonding_title: "Service Zone",
-    highlight_bonding_desc: "Tailored services for families, photo-taking, corporate events, and seniors to ensure stress-free trips.",
-    cta_text: " 'Adventure is at your doorstep, let us set off together!' "
+    highlight_bonding_desc: "Tailored services for families, corporate groups, and seniors, ensuring a comfortable and accessible journey.",
+    cta_text: " 'Adventure is at your doorstep, let's go together!' ",
+    why_title: "Taoke Daxi Real-life Puzzle",
+    why_subtitle: "More than travel, it's a participatory journey into Hakka culture.",
+    f1_title: "Deep Storytelling",
+    f1_desc: "Integrating Hakka history and literature into a puzzle story for a sentimental immersion.",
+    f2_title: "LINE Bot-Guided Quest",
+    f2_desc: "Combining digital tech with old street scenery, guided by mobile for an instant adventure.",
+    f3_title: "Cultural Fusion",
+    f3_desc: "Enjoy local delicacies like dried tofu and fish while you explore cultural landmarks.",
+    f4_title: "Physical Puzzle Kit",
+    f4_desc: "Exquisite physical kits blending traditional wisdom with parent-child manual collaboration.",
+    more: "Learn More",
+    view_route: "View Route",
+    view_food: "View Food Map",
+    our_service: "Our Services",
+    footer_title: "Taoke Daxi Adventure",
+    footer_desc: "Not just a tour, but an exploration of culture. Let families see the beauty of Hakka culture through puzzles.",
+    footer_contact: "Contact Info",
+    footer_org: "Organizer: Taoke Daxi Creative Marketing Co.",
+    footer_follow: "Follow Adventure",
+    footer_ig: "Click to IG",
+    footer_line: "Click to LINE",
+    footer_terms: "Terms of Service",
+    footer_privacy: "Privacy & Insurance",
+    footer_refund: "Refund Policy",
+    footer_safety: "Safety Guide",
+    footer_copy: "© 2026 Taoke Daxi Co. × CYCU IM. ALL RIGHTS RESERVED.",
+    about_back: "Return Home",
+    about_title: "About Taoke Daxi",
+    about_slogan: " 'A family real-life puzzle journey with Hakka culture as the worldview' ",
+    about_intro: "Making travel more than just a visit—a shared adventure completed together.",
+    about_what_is: "What is Taoke Daxi?",
+    about_what_is_p1: "Taoke Daxi is an immersive day-trip brand combining Hakka culture, family travel, and real-life puzzles.",
+    about_what_is_p2: "Using Daxi and Longtan as our stage, we connect local spots, food, and culture. Through interactive missions, travelers learn about Hakka culture and create lasting memories with family and friends.",
+    about_what_is_p3: "We believe culture should be felt and experienced, not just read about.",
+    about_immersive: "Immersive Co-Exploration",
+    about_philosophy_title: "More Than Just Travel",
+    about_philosophy_p1: "We hope to introduce people to Taoyuan's Hakka culture through innovative travel methods.",
+    about_philosophy_p2: "We expect every puzzle journey to become a truly unforgettable shared memory for families and friends.",
+    about_cta_title: "Ready to Start Your Adventure?",
+    about_cta_btn: "Start the Journey Now"
   },
   vi: {
-    story: "Mở đầu câu chuyện",
-    puzzle: "Giải đố thực tế",
-    route: "Lịch trình",
-    food: "Bản đồ ẩm thực",
-    events: "Sự kiện chủ đề",
-    faq: "Hỏi đáp (FAQ)",
-    about: "Về chúng tôi",
-    booking: "Đăng ký ngay!!",
-    hero_badge: ["#LựaChọnHàngĐầuGiaĐình"],
-    hero_title_1: "Một cuộc phiêu lưu",
+    story: "Mở đầu",
+    puzzle: "Giải đố",
+    route: "Hành trình",
+    food: "Ẩm thực",
+    events: "Sự kiện",
+    faq: "Hỏi đáp",
+    about: "Chúng tôi",
+    booking: "Đăng ký ngay!",
+    hero_badge: ["#DuLịchTrongNgày", "#GiảiĐốThựcTế", "#GiaĐìnhYêuThích"],
+    hero_title_1: "Cuộc phiêu lưu",
     hero_title_2: "cho cả gia đình",
     hero_title_3: "Hành trình Hakka",
-    hero_desc: " 'Chúng tôi không bán giải đố, chúng tôi bán kỷ niệm gia đình.' Bước vào Daxi và Longtan, tìm lại những mảnh văn hóa bị phong ấn.",
+    hero_desc: " 'Chúng tôi không chỉ là giải đố, chúng tôi là ký ức gia đình.' Bước vào phố cổ Daxi và Longtan để tìm lại văn hóa bị lãng quên.",
     hero_btn_1: "Bắt đầu nhiệm vụ",
     hero_btn_2: "Xem phần mở đầu",
-    highlight_puzzle_title: "Hành trình giải đố",
-    highlight_puzzle_desc: "Không chỉ là tham quan; cùng gia đình tìm manh mối và giải nhiệm vụ tại các khu phố cổ.",
-    highlight_route_title: "Điểm đến & Lịch trình",
-    highlight_route_desc: "Khám phá phố cổ Daxi, đường đạp xe Sankeng, nhà bảo tàng với dịch vụ xe trọn gói suốt hành trình.",
-    highlight_food_title: "Trải nghiệm ẩm thực",
-    highlight_food_desc: "Vừa chơi vừa ăn. Đậu phụ khô, cá hấp—làm sâu sắc thêm ký ức văn hóa bằng vị giác.",
-    highlight_bonding_title: "Dịch vụ chuyên khu",
-    highlight_bonding_desc: "Cung cấp dịch vụ tùy chỉnh dành riêng cho gia đình, chụp ảnh nghệ thuật, sự kiện nhóm và người cao tuổi.",
-    cta_text: " 'Cuộc phiêu lưu ngay trước cửa nhà, chúng ta hãy cùng nhau lên đường!' "
-  },
-  id: {
-    story: "Prolog Cerita",
-    puzzle: "Teka-teki Nyata",
-    route: "Rute Perjalanan",
-    food: "Peta Kuliner",
-    events: "Acara Bertema",
-    faq: "FAQ",
-    about: "Tentang Kami",
-    booking: "Daftar Sekarang!!",
-    hero_badge: ["#PilihanUtamaKeluarga"],
-    hero_title_1: "Petualangan untuk",
-    hero_title_2: "Selaruh Keluarga",
-    hero_title_3: "Ekspedisi Hakka",
-    hero_desc: " 'Kami tidak menjual teka-teki, tapi kenangan keluarga.' Masuki jalanan Daxi dan Longtan, temukan serpihan budaya yang tersegel.",
-    hero_btn_1: "Mulai Misi",
-    hero_btn_2: "Tonton Prolog",
-    highlight_puzzle_title: "Perjalanan Teka-teki",
-    highlight_puzzle_desc: "Bukan sekadar tamasya; bekerja sama dengan keluarga menemukan petunjuk di jalanan tua.",
-    highlight_route_title: "Rute & Perjalanan",
-    highlight_route_desc: "Menyusuri jalan kuno Daxi, Sankeng, dan museum budaya melalui bus pariwisata carteran sewaan.",
-    highlight_food_title: "Pengalaman Kuliner",
-    highlight_food_desc: "Makan sambil bermain. Tahu kering, ikan kukus—perdalam memori budaya dengan rasa.",
-    highlight_bonding_title: "Layanan Khusus",
-    highlight_bonding_desc: "Dukungan penuh untuk keluarga, pencinta foto, acara perusahaan, dan lansia agar semua merasa nyaman.",
-    cta_text: " 'Petualangan ada di depan pintu, mari kita berangkat bersama!' "
+    highlight_puzzle_title: "Khám phá giải đố",
+    highlight_puzzle_desc: "Không chỉ là tham quan; cùng gia đình tìm manh mối và giải nhiệm vụ tại các phố cổ.",
+    highlight_route_title: "Điểm đến",
+    highlight_route_desc: "Khám phá các địa danh văn hóa tiêu biểu bằng dịch vụ xe đưa đón trọn gói, không lo giao thông!",
+    highlight_food_title: "Vị giác văn hóa",
+    highlight_food_desc: "Vừa chơi vừa ăn. Đậu phụ khô, cá hấp—làm sâu sắc thêm ký ức văn hóa bằng hương vị.",
+    highlight_bonding_title: "Khu vực dịch vụ",
+    highlight_bonding_desc: "Dịch vụ riêng cho gia đình, nhóm công ty và người cao tuổi, đảm bảo hành trình thoải mái và thuận tiện.",
+    cta_text: " 'Cuộc phiêu lưu ngay trước cửa nhà, cùng nhau lên đường nào!' ",
+    why_title: "Giải đố Taoke Daxi",
+    why_subtitle: "Không chỉ là du lịch, mà là hành trình văn hóa Hakka sống động.",
+    f1_title: "Cốt truyện sâu sắc",
+    f1_desc: "Kết hợp lịch sử và văn học Hakka vào câu chuyện giải đố để tạo sự đắm chìm cảm xúc.",
+    f2_title: "LINE Bot hỗ trợ",
+    f2_desc: "Công nghệ kỹ thuật số kết hợp với phố cổ, dẫn dắt bởi điện thoại cho cuộc phiêu lưu tức thì.",
+    f3_title: "Tích hợp ẩm thực",
+    f3_desc: "Thưởng thức các món đặc sản địa phương trong khi khám phá các địa danh văn hóa.",
+    f4_title: "Bộ công cụ vật lý",
+    f4_desc: "Bộ dụng cụ vật lý tinh xảo kết hợp trí tuệ truyền thống, giúp cha mẹ và con cái cùng sáng tạo.",
+    more: "Tìm hiểu thêm",
+    view_route: "Xem hành trình",
+    view_food: "Xem bản đồ ẩm thực",
+    our_service: "Dịch vụ của chúng tôi",
+    footer_title: "Phiêu lưu Taoke Daxi",
+    footer_desc: "Không chỉ là du lịch, mà là khám phá văn hóa. Hãy để gia đình cảm nhận vẻ đẹp của văn hóa Hakka.",
+    footer_contact: "Thông tin liên hệ",
+    footer_org: "Tổ chức: Công ty Tiếp thị Sáng tạo Taoke Daxi",
+    footer_follow: "Theo dõi cuộc phiêu lưu",
+    footer_ig: "Truy cập IG",
+    footer_line: "Truy cập LINE",
+    footer_terms: "Điều khoản dịch vụ",
+    footer_privacy: "Bảo mật & Bảo hiểm",
+    footer_refund: "Quy định hoàn tiền",
+    footer_safety: "Hướng dẫn an toàn",
+    footer_copy: "© 2026 Taoke Daxi × CYCU IM. BẢO LƯU MỌI QUYỀN.",
+    about_back: "Trở về trang chủ",
+    about_title: "Về Taoke Daxi",
+    about_slogan: " 'Hành trình giải đố thực tế gia đình với văn hóa Hakka' ",
+    about_intro: "Biến du lịch thành không chỉ là một chuyến thăm—một cuộc phiêu lưu chung cùng nhau.",
+    about_what_is: "Taoke Daxi là gì?",
+    about_what_is_p1: "Taoke Daxi là thương hiệu du lịch trong ngày kết hợp văn hóa Hakka, du lịch gia đình và giải đố thực tế.",
+    about_what_is_p2: "Sử dụng Daxi và Longtan làm sân khấu, chúng tôi kết nối các điểm địa phương, ẩm thực và văn hóa. Qua nhiệm vụ tương tác, du khách học về văn hóa Hakka và tạo kỷ niệm khó quên với người thân.",
+    about_what_is_p3: "Chúng tin rằng văn hóa nên được cảm nhận và trải nghiệm, không chỉ đọc qua sách vở.",
+    about_immersive: "Đồng khám phá đắm chìm",
+    about_philosophy_title: "Hơn cả một chuyến đi",
+    about_philosophy_p1: "Chúng tôi hy vọng giới thiệu văn hóa Hakka của Taoyuan qua phương thức du lịch sáng tạo.",
+    about_philosophy_p2: "Mong muốn mỗi chuyến giải đố trở thành ký ức thật sự khó quên cho gia đình và bạn bè.",
+    about_cta_title: "Sẵn sàng bắt đầu phiêu lưu?",
+    about_cta_btn: "Bắt đầu hành trình ngay"
   }
 };
 
@@ -140,10 +305,10 @@ const Nav = () => {
   const navigate = useNavigate();
 
   const languages = [
-    { code: "zh", name: "繁體中文" },
-    { code: "en", name: "English" },
-    { code: "vi", name: "Tiếng Việt" },
-    { code: "id", name: "Bahasa Indonesia" },
+    { code: "zh-TW", name: "繁體中文" },
+    { code: "zh-CN", name: "简体中文" },
+    { code: "en", name: "英文" },
+    { code: "vi", name: "越南文" },
   ];
 
   const menuItems = [
@@ -159,17 +324,19 @@ const Nav = () => {
     <nav className="fixed top-0 w-full z-50 bg-hakka-cream/90 backdrop-blur-md border-b border-hakka-red/10">
       <div className="mx-auto max-w-7xl px-6 h-28 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-4 group cursor-pointer" onClick={() => setIsMenuOpen(false)}>
-          <img src="/logo.png" alt="桃客大溪" style={{ width: '81.4213px', height: 'auto' }} className="object-contain transition-transform group-hover:scale-110" referrerPolicy="no-referrer" />
+          <img src="/Public/logo.png" alt="桃客大溪" style={{ width: '81.4213px', height: 'auto' }} className="object-contain transition-transform group-hover:scale-110" referrerPolicy="no-referrer" />
           <div className="leading-tight">
             <span className="font-serif text-3xl md:text-4xl font-black text-hakka-red block tracking-tighter shrink-0">桃客大溪</span>
-            <span className="text-[10px] font-bold tracking-[0.2em] text-hakka-green block uppercase whitespace-nowrap">桃園客家旅遊實境解謎</span>
+            <span className={`font-bold tracking-[0.2em] text-hakka-green block uppercase whitespace-nowrap ${lang === 'en' || lang === 'vi' ? 'text-[8px]' : 'text-[10px]'}`}>
+              {lang === 'zh-TW' ? '桃園客家旅遊實境解謎' : lang === 'zh-CN' ? '桃园客家旅游实境解谜' : lang === 'vi' ? 'Khám phá giải đố thực tế Hakka Taoyuan' : 'Taoyuan Hakka Travel Real-Life Puzzle'}
+            </span>
           </div>
         </Link>
 
         {/* Desktop Menu */}
         <div 
           style={{ marginBottom: '0px', marginRight: '-29px' }}
-          className="hidden xl:flex items-center gap-8 font-bold text-[18px] uppercase tracking-widest text-hakka-green"
+          className={`hidden xl:flex items-center gap-8 font-bold uppercase tracking-widest text-hakka-green ${lang === 'en' || lang === 'vi' ? 'text-[14px]' : 'text-[18px]'}`}
         >
           {menuItems.map((item) => (
             <Link key={item.to} to={item.to} className="hover:text-hakka-red transition-colors border-b-2 border-transparent hover:border-hakka-red py-1">
@@ -281,7 +448,7 @@ const Home = () => {
   return (
     <main className="min-h-screen">
       {/* Hero */}
-      <section className="relative min-h-[90vh] pt-32 pb-20 flex items-center overflow-hidden">
+      <section className="relative min-h-[90vh] pt-28 pb-20 flex items-center overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 items-center gap-16 relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -290,21 +457,21 @@ const Home = () => {
           >
             <div className="flex flex-wrap gap-3 mb-6">
               {Array.isArray(t.hero_badge) ? t.hero_badge.map((badge: string, idx: number) => (
-                <div key={idx} className="px-5 py-2 bg-hakka-red/5 text-hakka-red text-xs font-bold rounded-full tracking-widest shadow-sm border border-hakka-red/10">
+                <div key={idx} className={`px-5 py-2 bg-hakka-red/5 text-hakka-red font-bold rounded-full tracking-widest shadow-sm border border-hakka-red/10 ${lang === 'en' || lang === 'vi' ? 'text-[10px]' : 'text-xs'}`}>
                   {badge}
                 </div>
               )) : (
-                <div className="px-5 py-2 bg-hakka-red/5 text-hakka-red text-xs font-bold rounded-full tracking-widest shadow-sm border border-hakka-red/10">
+                <div className={`px-5 py-2 bg-hakka-red/5 text-hakka-red font-bold rounded-full tracking-widest shadow-sm border border-hakka-red/10 ${lang === 'en' || lang === 'vi' ? 'text-[10px]' : 'text-xs'}`}>
                   {t.hero_badge}
                 </div>
               )}
             </div>
-            <h1 className="font-serif text-6xl md:text-8xl font-black text-hakka-brown mb-8 leading-[1.1]">
+            <h1 className={`font-serif font-black text-hakka-brown mb-8 leading-[1.1] ${lang === 'en' || lang === 'vi' ? 'text-4xl md:text-7xl' : 'text-6xl md:text-8xl'}`}>
               {t.hero_title_1}<br />
               {t.hero_title_2}<br />
               <span className="text-hakka-red">{t.hero_title_3}</span>
             </h1>
-            <p className="text-xl text-hakka-green/80 mb-10 max-w-lg leading-relaxed font-medium">
+            <p className={`text-hakka-green/80 mb-10 max-w-lg leading-relaxed font-medium ${lang === 'en' || lang === 'vi' ? 'text-lg' : 'text-xl'}`}>
               {t.hero_desc}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -359,37 +526,37 @@ const Home = () => {
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-black text-hakka-brown mb-4">
-              桃客大溪實境解謎
+            <h2 className={`font-serif font-black text-hakka-brown mb-4 ${lang === 'en' || lang === 'vi' ? 'text-2xl md:text-4xl' : 'text-3xl md:text-5xl'}`}>
+              {t.why_title}
             </h2>
             <p className="text-slate-500 text-base md:text-lg font-medium">
-              不只是旅遊，更是一場參與式的客家文化啟迪之旅
+              {t.why_subtitle}
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: "深度故事世界觀",
-                desc: "將客家歷史、魯冰花等文學記憶融入解謎故事，打造極具情懷的沉浸冒險。",
+                title: t.f1_title,
+                desc: t.f1_desc,
                 icon: <Sparkles className="w-6 h-6 text-hakka-red" />,
                 bg: "bg-hakka-red/5"
               },
               {
-                title: "APP輔助解謎",
-                desc: "數位科技與老街地景結合，手機引導精采劇情，讓解密冒險隨時展開。",
+                title: t.f2_title,
+                desc: t.f2_desc,
                 icon: <Smartphone className="w-6 h-6 text-hakka-green" />,
                 bg: "bg-hakka-green/5"
               },
               {
-                title: "美食文化整合",
-                desc: "邊玩邊享用特色滷豆干、牛汶水與客家活魚料理，讓舌尖美味成為尋寶地圖的一部分。",
+                title: t.f3_title,
+                desc: t.f3_desc,
                 icon: <Utensils className="w-6 h-6 text-hakka-brown" />,
                 bg: "bg-hakka-brown/5"
               },
               {
-                title: "實體探索包設計",
-                desc: "精美的實體線索探索包，融合傳統工藝智慧，讓親子動手拼湊出專屬記憶之鑰。",
+                title: t.f4_title,
+                desc: t.f4_desc,
                 icon: <BookOpen className="w-6 h-6 text-hakka-gold" />,
                 bg: "bg-hakka-gold/5"
               }
@@ -425,10 +592,10 @@ const Home = () => {
                   <div className="w-16 h-16 bg-hakka-red text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-6 transition-transform">
                     <MapPin className="w-8 h-8" />
                   </div>
-                  <h3 className="font-serif text-3xl text-hakka-brown mb-6 font-black">{t.highlight_puzzle_title}</h3>
+                  <h3 className={`font-serif text-hakka-brown mb-6 font-black leading-tight ${lang === 'en' || lang === 'vi' ? 'text-xl' : 'text-3xl'}`}>{t.highlight_puzzle_title}</h3>
                   <p className="text-slate-500 leading-relaxed mb-6">{t.highlight_puzzle_desc}</p>
                 </div>
-                <div className="flex items-center gap-2 text-hakka-red font-bold">了解更多 <ArrowRight className="w-4 h-4" /></div>
+                <div className="flex items-center gap-2 text-hakka-red font-bold">{t.more} <ArrowRight className="w-4 h-4" /></div>
               </div>
             </Link>
 
@@ -438,10 +605,10 @@ const Home = () => {
                   <div className="w-16 h-16 bg-hakka-gold text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-6 transition-transform shadow-md">
                     <Compass className="w-8 h-8" />
                   </div>
-                  <h3 className="font-serif text-3xl text-hakka-brown mb-6 font-black">{t.highlight_route_title}</h3>
+                  <h3 className={`font-serif text-hakka-brown mb-6 font-black leading-tight ${lang === 'en' || lang === 'vi' ? 'text-xl' : 'text-3xl'}`}>{t.highlight_route_title}</h3>
                   <p className="text-slate-500 leading-relaxed mb-6">{t.highlight_route_desc}</p>
                 </div>
-                <div className="flex items-center gap-2 text-hakka-red font-bold">查看行程介紹 <ArrowRight className="w-4 h-4" /></div>
+                <div className="flex items-center gap-2 text-hakka-red font-bold">{t.view_route} <ArrowRight className="w-4 h-4" /></div>
               </div>
             </Link>
 
@@ -451,10 +618,10 @@ const Home = () => {
                   <div className="w-16 h-16 bg-hakka-green text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-6 transition-transform">
                     <Utensils className="w-8 h-8" />
                   </div>
-                  <h3 className="font-serif text-3xl text-hakka-brown mb-6 font-black">{t.highlight_food_title}</h3>
+                  <h3 className={`font-serif text-hakka-brown mb-6 font-black leading-tight ${lang === 'en' || lang === 'vi' ? 'text-xl' : 'text-3xl'}`}>{t.highlight_food_title}</h3>
                   <p className="text-slate-500 leading-relaxed mb-6">{t.highlight_food_desc}</p>
                 </div>
-                <div className="flex items-center gap-2 text-hakka-red font-bold">查看美食地圖 <ArrowRight className="w-4 h-4" /></div>
+                <div className="flex items-center gap-2 text-hakka-red font-bold">{t.view_food} <ArrowRight className="w-4 h-4" /></div>
               </div>
             </Link>
 
@@ -464,10 +631,10 @@ const Home = () => {
                   <div className="w-16 h-16 bg-hakka-brown text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-6 transition-transform">
                     <Users className="w-8 h-8" />
                   </div>
-                  <h3 className="font-serif text-3xl text-hakka-brown mb-6 font-black">{t.highlight_bonding_title}</h3>
+                  <h3 className={`font-serif text-hakka-brown mb-6 font-black leading-tight ${lang === 'en' || lang === 'vi' ? 'text-xl' : 'text-3xl'}`}>{t.highlight_bonding_title}</h3>
                   <p className="text-slate-500 leading-relaxed mb-6">{t.highlight_bonding_desc}</p>
                 </div>
-                <div className="flex items-center gap-2 text-hakka-red font-bold">我們的服務 <ArrowRight className="w-4 h-4" /></div>
+                <div className="flex items-center gap-2 text-hakka-red font-bold">{t.our_service} <ArrowRight className="w-4 h-4" /></div>
               </div>
             </Link>
           </div>
@@ -487,7 +654,7 @@ const Home = () => {
 };
 
 export default function App() {
-  const [lang, setLang] = useState("zh");
+  const [lang, setLang] = useState("zh-TW");
 
   return (
     <LanguageContext.Provider value={{ lang, setLang }}>
