@@ -279,7 +279,7 @@ export const EventDetail = () => {
       period: currentEvt.e1_period,
       desc: currentEvt.e1_desc,
       longDesc: dt.e1_long,
-      img: "/Public/客家五月雪.png",
+      img: "https://i.ibb.co/5hqyP2jG/image.png",
       type: currentEvt.e1_type,
       difficulty: "★★☆☆☆",
       diffNote: dt.note1,
@@ -290,7 +290,7 @@ export const EventDetail = () => {
       limitedEvent: {
         title: dt.e1_lt,
         content: dt.e1_lc,
-        image: "/Public/油桐花花瓶.jpg"
+        image: "https://i.ibb.co/kgpBBGfD/image.jpg"
       }
     },
     "0-1": {
@@ -299,7 +299,7 @@ export const EventDetail = () => {
       period: currentEvt.e2_period,
       desc: currentEvt.e2_desc,
       longDesc: dt.e2_long,
-      img: "/Public/九月雪 韭菜花季.png",
+      img: "https://i.ibb.co/TMr4pNQj/image.png",
       type: currentEvt.e2_type,
       difficulty: "★★★☆☆",
       diffNote: dt.note2,
@@ -314,7 +314,7 @@ export const EventDetail = () => {
       period: currentEvt.e3_period,
       desc: currentEvt.e3_desc,
       longDesc: dt.e3_long,
-      img: "/Public/大龍門鱻漫遊.png",
+      img: "https://i.ibb.co/93dLd2kS/image.png",
       type: currentEvt.e3_type,
       difficulty: "★★★★☆",
       diffNote: dt.note3,

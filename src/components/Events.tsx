@@ -175,7 +175,7 @@ export const Events = () => {
           badge: et.e1_badge,
           color: "bg-white",
           accentColor: "text-rose-400",
-          img: "/Public/客家五月雪.png"
+          img: "https://i.ibb.co/5hqyP2jG/image.png"
         },
         {
           name: et.e2_name,
@@ -187,7 +187,7 @@ export const Events = () => {
           badge: et.e2_badge,
           color: "bg-yellow-50/30",
           accentColor: "text-amber-500",
-          img: "/Public/九月雪 韭菜花季.png"
+          img: "https://i.ibb.co/TMr4pNQj/image.png"
         },
         {
           name: et.e3_name,
@@ -199,7 +199,7 @@ export const Events = () => {
           badge: et.e3_badge,
           color: "bg-sky-50/30",
           accentColor: "text-sky-600",
-          img: "/Public/大龍門鱻漫遊.png"
+          img: "https://i.ibb.co/93dLd2kS/image.png"
         }
       ]
     }

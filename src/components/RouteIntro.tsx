@@ -202,7 +202,7 @@ export const RouteIntro = () => {
       time: "10:00 AM",
       icon: <MapPin className="w-5 h-5 md:w-6 md:h-6" />,
       highlights: rt.s1.hl,
-      imageUrl: "/Public/行程景點照片/中壢車站.png",
+      imageUrl: "https://i.ibb.co/YFJvSKkS/image.png",
       tips: rt.s1.tips
     },
     {
@@ -215,7 +215,7 @@ export const RouteIntro = () => {
       time: "10:40 AM",
       icon: <Bike className="w-5 h-5 md:w-6 md:h-6" />,
       highlights: rt.s2.hl,
-      imageUrl: "/Public/行程景點照片/三坑鐵馬道.png",
+      imageUrl: "https://i.ibb.co/gZndCVBD/image.jpg",
       tips: rt.s2.tips
     },
     {
@@ -228,7 +228,7 @@ export const RouteIntro = () => {
       time: "12:00 PM",
       icon: <Utensils className="w-5 h-5 md:w-6 md:h-6" />,
       highlights: rt.s3.hl,
-      imageUrl: "/Public/大溪老街.jpg",
+      imageUrl: "https://i.ibb.co/84dNBr3L/image.jpg",
       tips: rt.s3.tips
     },
     {
@@ -241,7 +241,7 @@ export const RouteIntro = () => {
       time: "13:30 PM",
       icon: <Layers className="w-5 h-5 md:w-6 md:h-6" />,
       highlights: rt.s4.hl,
-      imageUrl: "/Public/行程景點照片/大溪木藝生態博物館.png",
+      imageUrl: "https://i.ibb.co/nsHPBChh/image.jpg",
       tips: rt.s4.tips
     },
     {
@@ -280,7 +280,7 @@ export const RouteIntro = () => {
       time: "18:00 PM",
       icon: <Bus className="w-5 h-5 md:w-6 md:h-6" />,
       highlights: rt.s7.hl,
-      imageUrl: "/Public/遊覽車回程.png",
+      imageUrl: "https://i.ibb.co/G30S2N51/image.png",
       tips: rt.s7.tips
     },
     {
@@ -293,7 +293,7 @@ export const RouteIntro = () => {
       time: "18:30 PM",
       icon: <Clock className="w-5 h-5 md:w-6 md:h-6" />,
       highlights: rt.s8.hl,
-      imageUrl: "/Public/行程景點照片/中壢車站.png",
+      imageUrl: "https://i.ibb.co/YFJvSKkS/image.png",
       tips: rt.s8.tips
     }
   ];

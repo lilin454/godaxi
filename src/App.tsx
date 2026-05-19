@@ -307,8 +307,8 @@ const Nav = () => {
   const languages = [
     { code: "zh-TW", name: "繁體中文" },
     { code: "zh-CN", name: "简体中文" },
-    { code: "en", name: "英文" },
-    { code: "vi", name: "越南文" },
+    { code: "en", name: "English" },
+    { code: "vi", name: "Tiếng Việt" },
   ];
 
   const menuItems = [
@@ -324,7 +324,7 @@ const Nav = () => {
     <nav className="fixed top-0 w-full z-50 bg-hakka-cream/90 backdrop-blur-md border-b border-hakka-red/10">
       <div className="mx-auto max-w-7xl px-6 h-28 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-4 group cursor-pointer" onClick={() => setIsMenuOpen(false)}>
-          <img src="/Public/logo.png" alt="桃客大溪" style={{ width: '81.4213px', height: 'auto' }} className="object-contain transition-transform group-hover:scale-110" referrerPolicy="no-referrer" />
+          <img src="https://i.ibb.co/MyjK491K/logo.png" alt="桃客大溪" style={{ width: '81.4213px', height: 'auto' }} className="object-contain transition-transform group-hover:scale-110" referrerPolicy="no-referrer" />
           <div className="leading-tight">
             <span className="font-serif text-3xl md:text-4xl font-black text-hakka-red block tracking-tighter shrink-0">桃客大溪</span>
             <span className={`font-bold tracking-[0.2em] text-hakka-green block uppercase whitespace-nowrap ${lang === 'en' || lang === 'vi' ? 'text-[8px]' : 'text-[10px]'}`}>

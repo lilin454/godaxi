@@ -141,7 +141,7 @@ export const About = () => {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/Public/大溪老街.jpg" 
+            src="https://i.ibb.co/84dNBr3L/image.jpg" 
             alt="Daxi Old Street" 
             className="w-full h-full object-cover opacity-40 grayscale-[0.3]"
           />
@@ -156,7 +156,7 @@ export const About = () => {
             className="w-full flex flex-col items-center"
           >
             <img 
-              src="/Public/logo.png" 
+              src="https://i.ibb.co/MyjK491K/logo.png" 
               alt="Logo" 
               className="w-40 md:w-64 mb-12 drop-shadow-[0_20px_50px_rgba(0,0,0,0.15)]" 
               style={{ marginTop: '86px' }}
@@ -205,7 +205,7 @@ export const About = () => {
           </motion.div>
           <div className="relative">
             <div className="aspect-square rounded-[4rem] overflow-hidden shadow-2xl border-8 border-white">
-              <img src="/Public/大家一起看地圖.jpg" alt="Adventure" className="w-full h-full object-cover" />
+              <img src="https://i.ibb.co/mCXffsr9/image.jpg" alt="Adventure" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-10 -left-10 w-[162.991px] h-[162.991px] bg-hakka-gold rounded-full flex items-center justify-center text-hakka-brown font-black text-center p-6 shadow-xl rotate-[-10deg] border-4 border-white text-[18px]">
               {t.about_immersive}
@@ -270,7 +270,7 @@ export const About = () => {
                 viewport={{ once: true }}
                 className="relative z-20 w-80 h-80 bg-white rounded-full flex items-center justify-center shadow-[0_30px_100px_rgba(140,74,50,0.15)] border-4 border-hakka-gold/20"
               >
-                <img src="/Public/logo.png" alt="Logo" className="w-60 h-60 object-contain drop-shadow-xl" />
+                <img src="https://i.ibb.co/MyjK491K/logo.png" alt="Logo" className="w-60 h-60 object-contain drop-shadow-xl" />
                 <div className="absolute inset-0 rounded-full bg-hakka-red/5 animate-pulse"></div>
               </motion.div>
 
@@ -328,7 +328,7 @@ export const About = () => {
             {/* Mobile/Tablet View: Interactive Grid of Cards */}
             <div className="lg:hidden flex flex-col items-center gap-12 px-4 max-md:w-full">
               <div className="relative w-56 h-56 md:w-72 md:h-72 bg-white rounded-full flex items-center justify-center shadow-2xl border-4 border-hakka-gold/10">
-                <img src="/Public/logo.png" alt="Logo" className="w-40 md:w-56 h-40 md:h-56 object-contain" />
+                <img src="https://i.ibb.co/MyjK491K/logo.png" alt="Logo" className="w-40 md:w-56 h-40 md:h-56 object-contain" />
               </div>
               
               <div className="grid md:grid-cols-2 gap-6 w-full">

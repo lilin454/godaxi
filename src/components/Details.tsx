@@ -101,12 +101,12 @@ export const PuzzleDetail = () => {
   const pt = translations[lang] || translations["zh-TW"];
 
   const images = [
-    "/Public/活動精彩紀錄/活動精彩紀錄1.jpg",
-    "/Public/活動精彩紀錄/活動精彩紀錄2.jpg",
-    "/Public/活動精彩紀錄/活動精彩紀錄3.jpg",
-    "/Public/活動精彩紀錄/活動精彩紀錄4.jpg",
-    "/Public/活動精彩紀錄/活動精彩紀錄5.jpg",
-    "/Public/活動精彩紀錄/活動精彩紀錄6.jpg"
+    "https://i.ibb.co/xScvFB6F/1.jpg",
+    "https://i.ibb.co/Lz3BsLWq/2.jpg",
+    "https://i.ibb.co/Qsk3f04/3.jpg",
+    "https://i.ibb.co/05p816j/4.jpg",
+    "https://i.ibb.co/20LsPVWT/5.jpg",
+    "https://i.ibb.co/wZY0ZNJG/6.jpg"
   ];
   const [currentImage, setCurrentImage] = useState(0);
   const location = useLocation();
@@ -165,7 +165,7 @@ export const PuzzleDetail = () => {
               </div>
             </div>
             <div className="rounded-[4rem] overflow-hidden shadow-2xl relative aspect-square border-8 border-white">
-               <img src="/Public/實境解謎示意圖.png" className="w-full h-full object-cover" alt="Real game" />
+               <img src="https://i.ibb.co/Nd7XbjMf/image.png" className="w-full h-full object-cover" alt="Real game" />
             </div>
           </div>
         </section>
@@ -421,7 +421,7 @@ export const FoodDetail = () => {
       short: ft.food_fish_short,
       desc: ft.food_fish_desc, 
       x: "25%", y: "45%", 
-      img: "/Public/三坑活魚料理.jpg",
+      img: "https://i.ibb.co/jvm9gQ71/image.jpg",
       tags: ft.food_fish_tags,
       pointStyle: { marginLeft: "-27px", marginTop: "-27px", paddingLeft: "21px", paddingTop: "27px", width: "42.9722px", height: "54.9653px", paddingBottom: "9px" }
     },
@@ -431,7 +431,7 @@ export const FoodDetail = () => {
       short: ft.food_bun_short,
       desc: ft.food_bun_desc, 
       x: "45%", y: "35%", 
-      img: "/Public/客家菜包.png",
+      img: "https://i.ibb.co/bjfdJKVX/image.png",
       tags: ft.food_bun_tags,
       pointStyle: { marginLeft: "-49px", marginTop: "-37px", paddingLeft: "28px", paddingTop: "29px", marginRight: "-3px", marginBottom: "-3px", width: "88.914px", height: "56.9583px" }
     },
@@ -441,7 +441,7 @@ export const FoodDetail = () => {
       short: ft.food_niu_short,
       desc: ft.food_niu_desc, 
       x: "32%", y: "68%", 
-      img: "/Public/牛汶水.png",
+      img: "https://i.ibb.co/8gpqT9CH/image.png",
       tags: ft.food_niu_tags,
       pointStyle: { marginLeft: "8px", marginTop: "-31px", paddingTop: "26px", paddingLeft: "23px", width: "44.9838px", height: "53.9653px" }
     },
@@ -451,7 +451,7 @@ export const FoodDetail = () => {
       short: ft.food_tofu_short,
       desc: ft.food_tofu_desc, 
       x: "78%", y: "42%", 
-      img: "/Public/大溪老阿伯豆干.png",
+      img: "https://i.ibb.co/9krCBSHs/image.png",
       tags: ft.food_tofu_tags,
       pointStyle: { marginLeft: "-40px", marginTop: "-26px", paddingLeft: "42px", paddingTop: "26px", width: "84.9491px", height: "53.9653px", marginRight: "0px" },
       popupDir: "left"
@@ -462,7 +462,7 @@ export const FoodDetail = () => {
       short: ft.food_bamboo_short,
       desc: ft.food_bamboo_desc, 
       x: "15%", y: "20%", 
-      img: "/Public/茭白筍.png",
+      img: "https://i.ibb.co/mCKLgypm/image.png",
       tags: ft.food_bamboo_tags,
       pointStyle: { marginLeft: "-38px", marginTop: "-7px", paddingLeft: "24px", paddingTop: "29px", width: "45.9838px", height: "58.9653px" }
     },
@@ -472,7 +472,7 @@ export const FoodDetail = () => {
       short: ft.food_soup_short,
       desc: ft.food_soup_desc, 
       x: "60%", y: "25%", 
-      img: "/Public/范媽媽客家鹹湯圓.png",
+      img: "https://i.ibb.co/FkNcG9QV/image.png",
       tags: ft.food_soup_tags,
       pointStyle: { marginLeft: "-39px", marginTop: "-32px", paddingTop: "26px", paddingLeft: "46px", width: "91.9375px", height: "52.9653px" },
       popupDir: "left"
@@ -483,7 +483,7 @@ export const FoodDetail = () => {
       short: ft.food_moon_short,
       desc: ft.food_moon_desc, 
       x: "80%", y: "70%", 
-      img: "/Public/月光餅.png",
+      img: "https://i.ibb.co/RpHFvn55/image.png",
       tags: ft.food_moon_tags,
       pointStyle: { marginLeft: "-10px", marginTop: "2px" },
       popupDir: "left"
@@ -494,7 +494,7 @@ export const FoodDetail = () => {
       short: ft.food_sauce_short,
       desc: ft.food_sauce_desc, 
       x: "15%", y: "75%", 
-      img: "/Public/客家桔醬.png",
+      img: "https://i.ibb.co/8gr3hHqJ/image.png",
       tags: ft.food_sauce_tags,
       pointStyle: { marginLeft: "13px", marginTop: "3px" },
       popupDir: "right-up"
@@ -547,7 +547,7 @@ export const FoodDetail = () => {
         </div>
         
         <div id="food-map" className="relative aspect-video rounded-xl md:rounded-3xl border-4 border-white shadow-2xl overflow-hidden mb-8 md:mb-20 group scroll-mt-36">
-          <img src="/Public/foods map.png" alt="Food Map" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000" referrerPolicy="no-referrer" />
+          <img src="https://i.ibb.co/DDjknh00/foods-map.png" alt="Food Map" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000" referrerPolicy="no-referrer" />
           
           {foods.map((food: any, idx) => (
             <motion.div 

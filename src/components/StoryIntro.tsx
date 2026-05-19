@@ -115,10 +115,10 @@ export const StoryIntro = () => {
       title: st.story1_title,
       desc: st.story1_desc,
       pages: [
-        "/Public/故事序章/1.jpg",
-        "/Public/故事序章/2.jpg",
-        "/Public/故事序章/3.jpg",
-        "/Public/故事序章/4.jpg"
+        "https://i.ibb.co/k2hfYZBP/1.jpg",
+        "https://i.ibb.co/fdNSyZ1Z/2.jpg",
+        "https://i.ibb.co/BVk2f7db/3.jpg",
+        "https://i.ibb.co/9HzsLV2B/4.jpg"
       ],
       missions: [
         { step: 1, name: st.m1, location: "鍾肇政文學園區" },
@@ -213,10 +213,10 @@ export const StoryIntro = () => {
               <X className="w-8 h-8" />
             </button>
 
-            <div className="max-w-2xl w-full">
+            <div className="w-full max-w-[300px] sm:max-w-[360px] md:max-w-[400px] lg:max-w-[420px] px-4 transform transition-all duration-300">
               {!showEndAction ? (
-                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col">
-                   <div className="relative aspect-square overflow-hidden bg-slate-50">
+                <div className="relative bg-white rounded-[2.5rem] shadow-2xl overflow-hidden flex flex-col">
+                   <div className="relative aspect-square overflow-hidden bg-slate-950">
                       <motion.img
                         key={currentPage}
                         initial={{ x: 300, opacity: 0 }}
@@ -225,19 +225,21 @@ export const StoryIntro = () => {
                         src={selectedStory.pages[currentPage]}
                         className="w-full h-full object-contain"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-8 text-white">
-                         <p className="text-lg font-bold mb-1 font-mono">{st.page} {currentPage + 1} / {selectedStory.pages.length}</p>
-                         <p className="opacity-80 text-sm">{st.explore}</p>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white pointer-events-none">
+                         <p className="text-lg font-bold mb-0.5 font-mono tracking-tighter">
+                           {st.page} {currentPage + 1} / {selectedStory.pages.length}
+                         </p>
+                         <p className="opacity-60 text-[10px] uppercase tracking-widest">{st.explore}</p>
                       </div>
                    </div>
                    
-                   <div className="p-6 bg-white flex justify-between items-center border-t border-slate-100">
-                      <button onClick={prevPage} disabled={currentPage === 0} className="flex items-center gap-2 font-bold disabled:opacity-30">
-                        <ChevronLeft /> {st.prev}
+                   <div className="p-5 bg-white flex justify-between items-center border-t border-slate-100">
+                      <button onClick={prevPage} disabled={currentPage === 0} className="flex items-center gap-1.5 font-bold disabled:opacity-20 text-slate-500 hover:text-hakka-brown transition-colors">
+                        <ChevronLeft className="w-5 h-5" /> {st.prev}
                       </button>
                       
-                      <button onClick={nextPage} className="flex items-center gap-2 font-bold text-hakka-red">
-                        {currentPage === selectedStory.pages.length - 1 ? st.end_title : st.next} <ChevronRight />
+                      <button onClick={nextPage} className="flex items-center gap-1.5 font-bold text-hakka-red hover:scale-105 active:scale-95 transition-all">
+                        {currentPage === selectedStory.pages.length - 1 ? st.end_title : st.next} <ChevronRight className="w-5 h-5" />
                       </button>
                    </div>
                 </div>

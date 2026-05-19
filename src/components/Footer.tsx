@@ -36,7 +36,7 @@ export const Footer = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div style={{ width: '95.9861px', height: '94.9861px' }} className="bg-white p-1 rounded-lg flex items-center justify-center">
-                    <img src="/Public/IG QR code.png" alt="IG QR Code" style={{ width: '87px', height: '87px' }} className="object-contain" referrerPolicy="no-referrer" />
+                    <img src="https://i.ibb.co/pv8nBBFP/IG-QR-code.png" alt="IG QR Code" style={{ width: '87px', height: '87px' }} className="object-contain" referrerPolicy="no-referrer" />
                   </div>
                   <div className="text-sm">
                     <p className="font-bold">Instagram</p>
@@ -57,7 +57,7 @@ export const Footer = () => {
               <div className="space-y-4 border-t border-white/10 pt-6">
                 <div className="flex items-center gap-4">
                   <div style={{ width: '95.9861px', height: '94.9861px' }} className="bg-white p-1 rounded-lg flex items-center justify-center">
-                    <img src="/Public/LINE QRcode.jpg" alt="LINE QR Code" style={{ width: '87px', height: '87px' }} className="object-contain" referrerPolicy="no-referrer" />
+                    <img src="https://i.ibb.co/qMVHtcYc/LINE-QRcode.jpg" alt="LINE QR Code" style={{ width: '87px', height: '87px' }} className="object-contain" referrerPolicy="no-referrer" />
                   </div>
                   <div className="text-sm">
                     <p className="font-bold">LINE</p>
