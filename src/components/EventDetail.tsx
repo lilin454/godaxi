@@ -404,12 +404,12 @@ export const EventDetail = () => {
                
                <div className="grid md:grid-cols-2">
                   <div className="p-8 md:p-14 space-y-8 flex flex-col justify-center">
-                     <div className="flex items-center gap-3">
-                        <div className="bg-hakka-red/10 text-hakka-red px-5 py-2 rounded-full text-sm font-bold flex items-center gap-2">
-                           <Gift className="w-4 h-4" /> {dt.limited_tag}
+                     <div className="flex flex-wrap sm:flex-nowrap items-center gap-2 md:gap-3">
+                        <div className="bg-hakka-red/10 text-hakka-red px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs md:text-sm font-bold flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
+                           <Gift className="w-3.5 h-3.5 md:w-4 md:h-4 shrink-0" /> {dt.limited_tag}
                         </div>
-                        <div className="bg-rose-100 text-rose-500 px-5 py-2 rounded-full text-sm font-bold flex items-center gap-2">
-                           <Heart className="w-4 h-4" /> {dt.parent_tag}
+                        <div className="bg-rose-100 text-rose-500 px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs md:text-sm font-bold flex items-center gap-1.5 sm:gap-2 whitespace-nowrap">
+                           <Heart className="w-3.5 h-3.5 md:w-4 md:h-4 shrink-0" /> {dt.parent_tag}
                         </div>
                      </div>
                      

@@ -12,9 +12,9 @@ export const PuzzleDetail = () => {
       back: "返回首頁",
       title: "實境解謎到底是什麼？",
       quote: "「城市就是您的遊戲箱，這是一場打破虛擬與現實邊界的冒險。」",
-      intro: "實境解謎將遊戲場景搬到了大溪與龍潭的真實街道。您不需要坐在螢幕前，而是帶領家人走進老街、廟宇 or 古道。通過手上的解謎包道具、LINE Bot 的劇情引導，以及現場景物的觀察，解開一道道與當地歷史文化緊密相連的謎題。",
+      intro: "實境解謎將遊戲場景搬到大溪與龍潭的真實街道，讓您與家人走進桃園客家第一庄，踏上充滿故事的時光走廊。通過手上的解謎包、LINE Bot 的劇情引導，以及現場景物的觀察，解開一道道與當地歷史文化緊密相連的謎題。",
       family_title: "給全家的完美體驗",
-      family_desc: "我們特別針對親子、好友群體設計，讓解謎不再只是燒腦的邏輯對抗，更是一場增進溝通、共同創造回憶的文化探索。",
+      family_desc: "我們特別針對親子群體設計，讓解謎不再只是燒腦的邏輯對抗，更是一場增進溝通、共同創造回憶的文化探索。",
       tag1: "親子協作",
       tag2: "在地文化",
       method_title: "冒險進行方式",
@@ -24,6 +24,8 @@ export const PuzzleDetail = () => {
       step2_desc: "透過 LINE Bot 觀看劇情，讓大溪的故事在您眼前展開。",
       step3_title: "實地觀察解密",
       step3_desc: "運用您的觀察力，將地景線索轉化為解謎關鍵。",
+      step4_title: "累積「大溪幣」兌換精美好禮",
+      step4_desc: "透過大溪幣兌換專屬紀念品與在地商家折價券。",
       record_title: "活動精彩紀錄",
       ready_title: "準備好開始您的冒險了嗎？",
       watch_story: "觀看故事序章",
@@ -34,9 +36,9 @@ export const PuzzleDetail = () => {
       back: "返回首页",
       title: "实境解谜到底是什么？",
       quote: "“城市就是您的游戏箱，这是一场打破虚拟与现实边界的冒险。”",
-      intro: "实境解谜将游戏场景搬到了大溪与龙潭的真实街道。您不需要坐在屏幕前，而是带领家人走进老街、庙宇或古道。通过手上的解谜包道具、LINE Bot 的剧情引导，以及现场景物的观察，解开一道道与当地历史文化紧密相连的谜题。",
+      intro: "实境解谜将游戏场景搬到大溪与龙潭的真实街道，让您与家人走进桃园客家第一庄，踏上充满故事的时光走廊。通过手上的解谜包、LINE Bot 的剧情引导，以及现场景物的观察，解开一道道与当地历史文化紧密相连的谜题。",
       family_title: "给全家的完美体验",
-      family_desc: "我们特别针对亲子、好友群体设计，让解谜不再只是烧脑的逻辑对抗，更是一场增进沟通、共同创造回忆的文化探索。",
+      family_desc: "我们特别针对亲子群体设计，让解谜不再只是烧脑的逻辑对抗，更是一场增进沟通、共同创造回忆的文化探索。",
       tag1: "亲子协作",
       tag2: "在地文化",
       method_title: "冒险进行方式",
@@ -46,6 +48,8 @@ export const PuzzleDetail = () => {
       step2_desc: "通过 LINE Bot 观看剧情，让大溪的故事在您眼前展开。",
       step3_title: "实地观察解密",
       step3_desc: "运用您的观察力，将地景线索转化为解谜关键。",
+      step4_title: "累积“大溪币”兑换精美好礼",
+      step4_desc: "透过大溪币兑换专属纪念品与在地商家折价券。",
       record_title: "活动精彩纪录",
       ready_title: "准备好开始您的冒险了吗？",
       watch_story: "观看故事序章",
@@ -56,9 +60,9 @@ export const PuzzleDetail = () => {
       back: "Back to Home",
       title: "What is a Real-Life Puzzle?",
       quote: " 'The city is your game box; it is an adventure that breaks the boundary between virtual and reality.' ",
-      intro: "Real-life puzzles bring game scenes to the real streets of Daxi and Longtan. No screen time—take your family to old streets and ancient paths. Use physical kits, LINE Bot, and site observation to solve mysteries linked to local history.",
+      intro: "Real-life puzzles bring game scenes to the real streets of Daxi and Longtan, stepping into the first Hakka village in Taoyuan to embark on a story-filled corridor of time. Use physical kits, LINE Bot guidance, and site observation to solve mysteries linked to local history.",
       family_title: "The Perfect Family Experience",
-      family_desc: "Designed for families and friends, puzzles are no longer just brain-taxing logic but a cultural exploration that promotes communication and shared memories.",
+      family_desc: "Designed specifically for families, puzzles are no longer just brain-taxing logic but a cultural exploration that promotes communication and shared memories.",
       tag1: "Family Collab",
       tag2: "Local Culture",
       method_title: "How to Adventure",
@@ -68,6 +72,8 @@ export const PuzzleDetail = () => {
       step2_desc: "Watch the story unfold on your phone as you explore Daxi.",
       step3_title: "Observation Mastery",
       step3_desc: "Use your observation skills to turn landmarks into keys.",
+      step4_title: "Accumulate 'Daxi Coins' for Gifts",
+      step4_desc: "Redeem Daxi Coins for exclusive souvenirs and local shop discount coupons.",
       record_title: "Activity Records",
       ready_title: "Ready to start?",
       watch_story: "Watch Prologue",
@@ -78,9 +84,9 @@ export const PuzzleDetail = () => {
       back: "Về trang chủ",
       title: "Giải đố thực tế là gì?",
       quote: " 'Thành phố là hộp trò chơi của bạn; đây là cuộc phiêu lưu phá vỡ ranh giới ảo và thực.' ",
-      intro: "Giải đố thực tế mang bối cảnh trò chơi đến các con phố của Daxi và Longtan. Không cần ngồi trước màn hình, hãy đưa gia đình đến các phố cổ và đền đài. Sử dụng bộ dụng cụ, LINE Bot và quan sát thực tế để giải mã lịch sử địa phương.",
+      intro: "Trò chơi giải đố thực tế mang bối cảnh trò chơi đến các con phố thực của Daxi và Longtan, đưa bạn và gia đình bước vào ngôi làng Hakka đầu tiên ở Đào Viên để bước đi trên hành lang thời gian đầy những câu chuyện. Sử dụng bộ dụng cụ, LINE Bot hướng dẫn và quan sát thực tế để giải mã những bí ẩn liên kết với lịch sử địa phương.",
       family_title: "Trải nghiệm gia đình hoàn hảo",
-      family_desc: "Được thiết kế cho gia đình và bạn bè, giải đố không chỉ là tư duy logic mà còn là khám phá văn hóa, tăng cường giao tiếp và tạo kỷ niệm chung.",
+      family_desc: "Được thiết kế đặc biệt cho các gia đình, giải đố không chỉ là tư duy logic mà còn là khám phá văn hóa, tăng cường giao tiếp và tạo kỷ niệm chung.",
       tag1: "Hợp tác gia đình",
       tag2: "Văn hóa địa phương",
       method_title: "Cách thức tham gia",
@@ -90,6 +96,8 @@ export const PuzzleDetail = () => {
       step2_desc: "Theo dõi cốt truyện qua điện thoại khi bạn khám phá Daxi.",
       step3_title: "Quan sát thực tế",
       step3_desc: "Sử dụng khả năng quan sát để biến các di tích thành chìa khóa giải đố.",
+      step4_title: "Tích lũy 'Daxi Coin' nhận quà",
+      step4_desc: "Đổi Daxi Coin lấy quà lưu niệm độc quyền và phiếu giảm giá của các cửa hàng địa phương.",
       record_title: "Kỷ lục hoạt động",
       ready_title: "Sẵn sàng phiêu lưu?",
       watch_story: "Xem phần mở đầu",
@@ -172,19 +180,20 @@ export const PuzzleDetail = () => {
 
         <section id="adventure-method" className="mb-32 scroll-mt-36">
            <h2 className={`section-title text-center mb-16 italic ${lang === 'en' || lang === 'vi' ? 'text-4xl md:text-6xl' : ''}`}>{pt.method_title}</h2>
-           <div className="grid md:grid-cols-3 gap-8">
+           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { step: "01", title: pt.step1_title, desc: pt.step1_desc, icon: <MapPin className="w-8 h-8" /> },
-                { step: "02", title: pt.step2_title, desc: pt.step2_desc, icon: <Info className="w-8 h-8" /> },
-                { step: "03", title: pt.step3_title, desc: pt.step3_desc, icon: <Star className="w-8 h-8" /> }
+                { step: "1", title: pt.step1_title, desc: pt.step1_desc, icon: <MapPin className="w-8 h-8" /> },
+                { step: "2", title: pt.step2_title, desc: pt.step2_desc, icon: <Info className="w-8 h-8" /> },
+                { step: "3", title: pt.step3_title, desc: pt.step3_desc, icon: <Star className="w-8 h-8" /> },
+                { step: "4", title: pt.step4_title, desc: pt.step4_desc, icon: <Sparkles className="w-8 h-8" /> }
               ].map((item, idx) => (
-                <div key={idx} className="bg-white p-8 md:p-12 rounded-[3.5rem] shadow-xl border border-hakka-gold/10 text-center hover:scale-105 transition-transform flex flex-col items-center">
-                   <div className="w-16 h-16 bg-hakka-red text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg">
+                <div key={idx} className="bg-white p-6 md:p-8 rounded-[2.5rem] shadow-xl border border-hakka-gold/10 text-center hover:scale-105 transition-transform flex flex-col items-center">
+                   <div className="w-16 h-16 bg-hakka-red text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shrink-0">
                       {item.icon}
                    </div>
-                   <span className="text-hakka-red font-black tracking-widest text-xs mb-4 block">{pt.step_label} {item.step}</span>
-                   <h3 className={`font-serif text-hakka-brown mb-6 font-bold ${lang === 'en' || lang === 'vi' ? 'text-xl md:text-2xl' : 'text-2xl'}`}>{item.title}</h3>
-                   <p className="text-slate-500 font-medium leading-relaxed">{item.desc}</p>
+                   <span className="text-hakka-red font-black tracking-widest text-xs mb-3 block">{pt.step_label} {item.step}</span>
+                   <h3 className={`font-serif text-hakka-brown mb-4 font-bold leading-snug ${lang === 'en' || lang === 'vi' ? 'text-base md:text-lg' : 'text-xl'}`}>{item.title}</h3>
+                   <p className="text-slate-500 font-medium text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
            </div>
@@ -681,17 +690,19 @@ export const BondingDetail = () => {
         services: [
           "協作解謎任務包：設計需親子共同思考的關卡。",
           "挖沙趣：客家文化館提供3種專業挖沙遊戲組供現場借用。",
-          "嬰兒車租借：免費提供租借（須押證件）。"
+          "嬰兒車租借：免費提供租借（須押證件）。",
+          "紀念冊：加購親子旅行紀念冊，團隊將有專人為您設計含有解謎過程與旅行紀錄的親子回憶錄。"
         ]
       },
       photo: {
         title: "時尚打卡專區",
-        desc: "專為愛好攝影與分享的年輕族群設計，捕捉大溪最美一面。",
+        desc: "專為愛好攝影與分享的族群設計，捕捉大溪與您最美的一面！",
         services: [
           "蝴蝶花廊：夢幻的自然光影交織。",
           "三坑泉水與水圳隧道口：復古與神祕的絕佳背景。",
           "客家老街：百年時光的影像定型。",
-          "三坑鐵馬道瞭望台：俯瞰大漢溪絕佳視野。"
+          "三坑鐵馬道瞭望台：俯瞰大漢溪絕佳視野。",
+          "專業攝影服務：旅行團隊將有專業攝影師跟隨，讓您可以安心沉浸於探索，又能收獲美好的旅行紀錄。"
         ]
       },
       team: {
@@ -723,17 +734,19 @@ export const BondingDetail = () => {
         services: [
           "协作解谜任务包：设计需亲子共同思考的关卡。",
           "挖沙趣：客家文化馆提供3种专业挖沙游戏组供现场借用。",
-          "婴儿车租借：免费提供租借（须押证件）。"
+          "婴儿车租借：免费提供租借（须押证件）。",
+          "纪念册：加购亲子旅行纪念册，团队将有专人为您设计含有解密过程与旅行纪录的亲子回忆录。"
         ]
       },
       photo: {
         title: "时尚打卡专区",
-        desc: "专为爱好摄影与分享的年轻族群设计，捕捉大溪最美一面。",
+        desc: "专为爱好摄影与分享的族群设计，捕捉大溪与您最美的一面！",
         services: [
           "蝴蝶花廊：梦幻的自然光影交织。",
           "三坑泉水与水圳隧道口：复古与神秘的绝佳背景。",
           "客家老街：百年时光的影像定型。",
-          "三坑铁马道瞭望台：俯瞰大汉溪绝佳视野。"
+          "三坑铁马道瞭望台：俯瞰大汉溪绝佳视野。",
+          "专业摄影服务：旅行团队将有专业摄影师跟随，让您可以安心沉浸于探索，又能收获美好的旅行纪录。"
         ]
       },
       team: {
