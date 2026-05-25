@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Puzzle, Users, Utensils, Smartphone, Sparkles, MapPin, Key, Palette, Circle, Layers, Droplets, Type } from "lucide-react";
 import { useTranslation } from "../App";
 
-const MindMapNode = ({ position, title, children, color, delay, icon, style }: any) => (
+const MindMapNode = ({ position, title, children, color, delay, icon, style, pStyle }: any) => (
   <motion.div 
     initial={{ opacity: 0, scale: 0.8 }}
     whileInView={{ opacity: 1, scale: 1 }}
@@ -18,7 +18,7 @@ const MindMapNode = ({ position, title, children, color, delay, icon, style }: a
       <h4 className={`text-xl font-bold mb-2 flex items-center gap-2 ${color === 'hakka-brown' ? 'text-hakka-brown' : color === 'hakka-red' ? 'text-hakka-red' : 'text-hakka-gold'}`}>
         {icon} {title}
       </h4>
-      <p className="text-sm text-slate-500 leading-relaxed group-hover:text-slate-700 transition-colors">
+      <p style={pStyle} className="text-sm text-slate-500 leading-relaxed group-hover:text-slate-700 transition-colors">
         {children}
       </p>
     </div>
@@ -293,6 +293,7 @@ export const About = () => {
                   delay={0.2} 
                   icon={<Droplets className="w-5 h-5" />}
                   style={{ paddingTop: "24px", marginLeft: "56px", paddingLeft: "27px", marginRight: "-45px", paddingRight: "24px" }}
+                  pStyle={{ fontSize: '13px' }}
                 >
                   {pt.mm_peach_desc}
                 </MindMapNode>

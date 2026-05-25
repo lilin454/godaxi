@@ -35,10 +35,10 @@ export const Footer = () => {
               {/* Instagram Section */}
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div style={{ width: '95.9861px', height: '94.9861px' }} className="bg-white p-1 rounded-lg flex items-center justify-center">
+                  <div style={{ width: '95.9861px', height: '94.9861px', fontSize: '12px' }} className="bg-white p-1 rounded-lg flex items-center justify-center">
                     <img src="https://i.ibb.co/pv8nBBFP/IG-QR-code.png" alt="IG QR Code" style={{ width: '87px', height: '87px' }} className="object-contain" referrerPolicy="no-referrer" />
                   </div>
-                  <div className="text-sm">
+                  <div style={{ fontSize: '12px' }} className="text-sm">
                     <p className="font-bold">Instagram</p>
                     <p className="text-white/50">ty.ka_daxi</p>
                   </div>

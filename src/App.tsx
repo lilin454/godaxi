@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation } from "react-router-dom";
 import { useState, createContext, useContext, useEffect } from "react";
 import { motion } from "motion/react";
-import { Search, MapPin, Utensils, Users, ArrowRight, Globe, ChevronDown, Menu, X, Sparkles, Smartphone, BookOpen, Clock, Compass } from "lucide-react";
+import { Search, MapPin, Utensils, Users, ArrowRight, Globe, ChevronDown, Menu, X, Sparkles, Smartphone, BookOpen, Clock, Compass, Youtube, ExternalLink } from "lucide-react";
 import { Footer } from "./components/Footer";
 import { StoryIntro } from "./components/StoryIntro";
 import { PuzzleDetail, FoodDetail, BondingDetail } from "./components/Details";
@@ -48,7 +48,7 @@ const translations: any = {
     hero_btn_1: "開啟冒險任務",
     hero_btn_2: "觀看故事序章",
     highlight_puzzle_title: "實境解謎之旅",
-    highlight_puzzle_desc: "不是走馬看花，是全家一起在老街、水圳中尋找線索、解開任務。",
+    highlight_puzzle_desc: "「用解謎，重新認識客家」\n領取實體探索包，和家人一起解開謎題獲取「大溪幣」，兌換精美好禮！",
     highlight_route_title: "景點與行程",
     highlight_route_desc: "精選三坑鐵馬道、客家文化館、大溪老街、木博館等精華地標，包車暢遊免除交通煩憂！",
     highlight_food_title: "美食感官體驗",
@@ -64,8 +64,8 @@ const translations: any = {
     f2_desc: "數位科技與老街地景結合，手機引導精采劇情，讓解密冒險隨時展開。",
     f3_title: "美食文化整合",
     f3_desc: "邊玩邊享用特色滷豆干、牛汶水與客家活魚料理，讓舌尖美味成為尋寶地圖的一部分。",
-    f4_title: "實體探索包設計",
-    f4_desc: "精美的實體線索探索包，融合傳統工藝智慧，讓親子動手拼湊出專屬記憶之鑰。",
+    f4_title: "在地商家折扣合作",
+    f4_desc: "透過解謎獲取桃客專屬「大溪幣」! 可累積兌換精美好禮。等你來挑戰！",
     more: "了解更多",
     view_route: "查看行程介紹",
     view_food: "查看美食地圖",
@@ -75,7 +75,7 @@ const translations: any = {
     footer_contact: "聯絡資訊",
     footer_org: "主辦單位：桃客大溪創意行銷公司",
     footer_follow: "追蹤冒險",
-    footer_ig: "點擊進入官方ＩＧ",
+    footer_ig: "點擊進入官方IG",
     footer_line: "點擊加入官方LINE帳號",
     footer_terms: "服務條款",
     footer_privacy: "隱私權政策與保險使用條款",
@@ -114,7 +114,7 @@ const translations: any = {
     hero_btn_1: "开启冒险任务",
     hero_btn_2: "观看故事序章",
     highlight_puzzle_title: "实境解谜之旅",
-    highlight_puzzle_desc: "不是走马看花，是全家一起在老街、水圳中寻找线索、解开任务。",
+    highlight_puzzle_desc: "“用解谜，重新认识客家”\n领取实体探索包，和家人一起解开谜题获取“大溪币”，兑换精美好礼！",
     highlight_route_title: "景点与行程",
     highlight_route_desc: "精选三坑铁马道、客家文化馆、大溪老街、木博馆等精华地标，提供包车服务，免除交通烦忧！",
     highlight_food_title: "美食感官体验",
@@ -130,8 +130,8 @@ const translations: any = {
     f2_desc: "数字科技与老街地景结合，手机引导精彩剧情，让解密冒险随时展开。",
     f3_title: "美食文化整合",
     f3_desc: "边玩边享用特色卤豆干、牛汶水与客家活鱼料理，让舌尖美味成为寻宝地图的一部分。",
-    f4_title: "实体探索包设计",
-    f4_desc: "精美的实体线索探索包，融合传统工艺智慧，让亲子动手拼凑出专属记忆之钥。",
+    f4_title: "在地商家折扣合作",
+    f4_desc: "透过解谜获取桃客专属「大溪币」! 可累积兑换精美好礼。等你来挑战！",
     more: "了解更多",
     view_route: "查看行程介绍",
     view_food: "查看美食地图",
@@ -141,7 +141,7 @@ const translations: any = {
     footer_contact: "联络信息",
     footer_org: "主办单位：桃客大溪创意营销公司",
     footer_follow: "追踪冒险",
-    footer_ig: "点击进入官方ＩＧ",
+    footer_ig: "点击进入官方IG",
     footer_line: "点击加入官方LINE账号",
     footer_terms: "服务条款",
     footer_privacy: "隐私政策与保险使用条款",
@@ -180,7 +180,7 @@ const translations: any = {
     hero_btn_1: "Start Mission",
     hero_btn_2: "Watch Prologue",
     highlight_puzzle_title: "Puzzle Journey",
-    highlight_puzzle_desc: "Not just sightseeing; work with your family to find clues and solve missions in old streets.",
+    highlight_puzzle_desc: " 'Rediscover Hakka through puzzle-solving' \nGet your physical adventure kit, solve puzzles with family to earn 'Daxi Coins', and redeem exquisite gifts!",
     highlight_route_title: "Route & Spots",
     highlight_route_desc: "Explore top cultural spots like old streets and museums with stress-free chartered bus travel!",
     highlight_food_title: "Food Sensory",
@@ -196,8 +196,8 @@ const translations: any = {
     f2_desc: "Combining digital tech with old street scenery, guided by mobile for an instant adventure.",
     f3_title: "Cultural Fusion",
     f3_desc: "Enjoy local delicacies like dried tofu and fish while you explore cultural landmarks.",
-    f4_title: "Physical Puzzle Kit",
-    f4_desc: "Exquisite physical kits blending traditional wisdom with parent-child manual collaboration.",
+    f4_title: "Local Partner Discounts",
+    f4_desc: "Earn exclusive 'Daxi Coins' through puzzles to redeem exquisite gifts. Challenge yourself!",
     more: "Learn More",
     view_route: "View Route",
     view_food: "View Food Map",
@@ -246,7 +246,7 @@ const translations: any = {
     hero_btn_1: "Bắt đầu nhiệm vụ",
     hero_btn_2: "Xem phần mở đầu",
     highlight_puzzle_title: "Khám phá giải đố",
-    highlight_puzzle_desc: "Không chỉ là tham quan; cùng gia đình tìm manh mối và giải nhiệm vụ tại các phố cổ.",
+    highlight_puzzle_desc: " 'Khám phá lại Hakka bằng cách giải câu đố' \nNhận bộ dụng cụ thực tế, giải câu đố cùng gia đình để tích lũy 'Daxi Coin' và nhận quà tặng!",
     highlight_route_title: "Điểm đến",
     highlight_route_desc: "Khám phá các địa danh văn hóa tiêu biểu bằng dịch vụ xe đưa đón trọn gói, không lo giao thông!",
     highlight_food_title: "Vị giác văn hóa",
@@ -262,8 +262,8 @@ const translations: any = {
     f2_desc: "Công nghệ kỹ thuật số kết hợp với phố cổ, dẫn dắt bởi điện thoại cho cuộc phiêu lưu tức thì.",
     f3_title: "Tích hợp ẩm thực",
     f3_desc: "Thưởng thức các món đặc sản địa phương trong khi khám phá các địa danh văn hóa.",
-    f4_title: "Bộ công cụ vật lý",
-    f4_desc: "Bộ dụng cụ vật lý tinh xảo kết hợp trí tuệ truyền thống, giúp cha mẹ và con cái cùng sáng tạo.",
+    f4_title: "Hợp tác giảm giá",
+    f4_desc: "Nhận 'Daxi Coin' độc quyền qua các câu đố để đổi những phần quà tinh xảo!",
     more: "Tìm hiểu thêm",
     view_route: "Xem hành trình",
     view_food: "Xem bản đồ ẩm thực",
@@ -494,12 +494,12 @@ const Home = () => {
               <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#A64B2A_1px,transparent_1px)] [background-size:20px_20px]"></div>
               
               <div className="absolute top-1/4 left-1/4 bg-white p-4 rounded-2xl shadow-lg border-b-4 border-orange-200">
-                <span className="text-[10px] text-slate-400 block font-bold mb-1 uppercase tracking-tighter">任務 01</span>
+                <span className="text-[10px] text-slate-400 block font-bold mb-1 uppercase tracking-tighter">任務 05</span>
                 <span className="font-serif font-bold text-sm text-hakka-brown">鍾肇政文學生活園區</span>
               </div>
               
               <div className="absolute top-1/2 right-1/4 bg-white p-4 rounded-2xl shadow-lg border-b-4 border-orange-200">
-                <span className="text-[10px] text-slate-400 block font-bold mb-1 uppercase tracking-tighter">任務 02</span>
+                <span className="text-[10px] text-slate-400 block font-bold mb-1 uppercase tracking-tighter">任務 04</span>
                 <span className="font-serif font-bold text-sm text-hakka-brown">客家文化館</span>
               </div>
 
@@ -508,7 +508,7 @@ const Home = () => {
               </div>
 
               <div className="absolute bottom-8 right-8 bg-white p-4 rounded-2xl shadow-lg border-b-4 border-orange-200">
-                <span className="text-[10px] text-slate-400 block font-bold mb-1 uppercase tracking-tighter">任務 05</span>
+                <span className="text-[10px] text-slate-400 block font-bold mb-1 uppercase tracking-tighter">任務 02</span>
                 <span className="font-serif font-bold text-sm text-hakka-brown">木藝生態博物館</span>
               </div>
             </div>
@@ -516,6 +516,24 @@ const Home = () => {
         </div>
         
         <div className="absolute top-0 right-0 w-1/3 h-full bg-hakka-gold/5 pointer-events-none -z-10"></div>
+      </section>
+
+      {/* Embedded Loop YouTube Video Section */}
+      <section className="py-12 bg-white relative overflow-hidden">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="relative group overflow-hidden rounded-xl border-4 border-white shadow-2xl bg-[#EAE7E0] transition-all duration-300 hover:shadow-3xl">
+            {/* YouTube embed player configured to loop & autoplay */}
+            <div className="w-full aspect-video">
+              <iframe
+                className="w-full h-full object-cover"
+                src="https://www.youtube.com/embed/saAAFq90xQA?autoplay=1&mute=1&loop=1&playlist=saAAFq90xQA&rel=0&controls=1"
+                title="大龍門鱻漫遊 桃客大溪實境解謎"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Why Choose Taoke Daxi (Moved here to replace high-impact banner as per user request) */}
@@ -593,7 +611,7 @@ const Home = () => {
                     <MapPin className="w-8 h-8" />
                   </div>
                   <h3 className={`font-serif text-hakka-brown mb-6 font-black leading-tight ${lang === 'en' || lang === 'vi' ? 'text-xl' : 'text-3xl'}`}>{t.highlight_puzzle_title}</h3>
-                  <p className="text-slate-500 leading-relaxed mb-6">{t.highlight_puzzle_desc}</p>
+                  <p className="text-slate-500 leading-relaxed mb-6 whitespace-pre-line">{t.highlight_puzzle_desc}</p>
                 </div>
                 <div className="flex items-center gap-2 text-hakka-red font-bold">{t.more} <ArrowRight className="w-4 h-4" /></div>
               </div>
