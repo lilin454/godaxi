@@ -25,7 +25,7 @@ export const FAQ = () => {
       q3: "活動價格是多少？",
       a3: "定價為 999元 / 人。",
       q4: "有什麼促銷活動嗎？",
-      a4: "我們提供多種折扣：\n1. 早鳥優惠：折抵 100元 (999✘➙899)。\n2. 四人同行一人免費 (買三送一)。\n3. 打卡分享：完成體驗後於 IG 打卡分享，可獲下次體驗 NT$50 折扣。",
+      a4: "我們提供多種折扣：\n1. 早鳥優惠：活動上線前30天享早鳥優惠，可折抵 100元。\n2. 四人同行一人免費 (買三送一)。\n3. 打卡分享：完成體驗後於 IG 打卡分享，可獲下次體驗 NT$50 折扣。",
       q5: "如何報名參加？",
       a5: "您可以透過本網站直接報名，或者透過 LINE 官方帳號進行訂購。"
     },
@@ -46,7 +46,7 @@ export const FAQ = () => {
       q3: "活动价格是多少？",
       a3: "定价为 999元 / 人。",
       q4: "有什么促销活动吗？",
-      a4: "我们提供多种折扣：\n1. 早鸟优惠：折抵 100元 (999✘➙899)。\n2. 四人同行一人免费 (买三送一)。\n3. 打卡分享：完成体验后于 IG 打卡分享，可获下次体验 NT$50 折扣。",
+      a4: "我们提供多种折扣：\n1. 早鸟优惠：活动上线前30天享早鸟优惠，可折抵 100元。\n2. 四人同行一人免费 (买三送一)。\n3. 打卡分享：完成体验后于 IG 打卡分享，可获下次体验 NT$50 折扣。",
       q5: "如何报名参加？",
       a5: "您可以透过本网站直接报名，或者透过 LINE 官方帐号进行订购。"
     },
@@ -67,7 +67,7 @@ export const FAQ = () => {
       q3: "How much is the activity?",
       a3: "Price is NT$999 / person.",
       q4: "Any promotions?",
-      a4: "We offer several discounts:\n1. Early Bird: NT$100 off (999✘➙899).\n2. Buy 3 Get 1 Free (4 people for 3 price).\n3. IG Share: Post on IG after experience to get NT$50 off next time.",
+      a4: "We offer several discounts:\n1. Early Bird: Early bird offer 30 days before launch, discount NT$100.\n2. Buy 3 Get 1 Free (4 people for 3 price).\n3. IG Share: Post on IG after experience to get NT$50 off next time.",
       q5: "How to register?",
       a5: "Register directly via this website or through official LINE account."
     },
@@ -88,7 +88,7 @@ export const FAQ = () => {
       q3: "Giá hoạt động là bao nhiêu?",
       a3: "Giá là 999 VNĐ / người (đơn vị Đài tệ).",
       q4: "Có chương trình khuyến mãi nào không?",
-      a4: "Chúng tôi có nhiều ưu đãi:\n1. Early Bird: Giảm 100 VNĐ (999✘➙899).\n2. Mua 3 tặng 1 (Nhóm 4 người).\n3. Chia sẻ IG: Chia sẻ sau trải nghiệm để nhận giảm giá 50 VNĐ lần sau.",
+      a4: "Chúng tôi có nhiều ưu đãi:\n1. Early Bird: Ưu đãi sớm 30 ngày trước khi mở bán, giảm 100 NTD.\n2. Mua 3 tặng 1 (Nhóm 4 người).\n3. Chia sẻ IG: Chia sẻ sau trải nghiệm để nhận giảm giá 50 NTD lần sau.",
       q5: "Làm thế nào để đăng ký?",
       a5: "Đăng ký trực tiếp qua trang web này hoặc qua tài khoản LINE chính thức."
     }
@@ -121,6 +121,43 @@ export const FAQ = () => {
       ]
     }
   ];
+
+  const renderAnswer = (text: string) => {
+    if (typeof text !== "string") return text;
+    const lines = text.split("\n");
+    if (lines.length <= 1) {
+      return text;
+    }
+    return (
+      <span className="block space-y-3 mt-1">
+        {lines.map((line, idx) => {
+          const match = line.match(/^(\d+\.\s*)(.*)$/);
+          if (match) {
+            const num = match[1];
+            const content = match[2];
+            const isEarlyBird = content.includes("早鳥") || content.includes("早鸟") || content.includes("Early Bird");
+            return (
+              <span key={idx} className="flex items-start gap-2 text-slate-600 leading-relaxed">
+                <span className="font-bold text-hakka-gold shrink-0">{num}</span>
+                <span className="flex-1 flex flex-wrap items-center gap-x-2 gap-y-1.5">
+                  <span>{content}</span>
+                  {isEarlyBird && (
+                    <span className="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-500 to-hakka-red text-white text-[11px] px-2.5 py-0.5 rounded-full font-bold shadow-sm animate-pulse whitespace-nowrap ml-1 origin-left">
+                      <span className="line-through opacity-75 decoration-white text-[10px] scale-90">NT$999</span>
+                      <span className="text-white text-[10px]">➔</span>
+                      <span className="text-white font-black text-xs md:text-sm">NT$899</span>
+                      <span className="text-[9px] md:text-[10px] bg-white/20 px-1.5 py-0.5 rounded">SAVE $100 ✨</span>
+                    </span>
+                  )}
+                </span>
+              </span>
+            );
+          }
+          return <span key={idx} className="block text-slate-600 font-medium mb-1">{line}</span>;
+        })}
+      </span>
+    );
+  };
 
   return (
     <div className="min-h-screen pt-28 pb-20 bg-hakka-cream selection:bg-hakka-red/20">
@@ -162,7 +199,7 @@ export const FAQ = () => {
                       </div>
                       <div>
                         <h4 className="text-lg font-bold text-hakka-brown mb-2 group-hover:text-hakka-red transition-colors">{item.q}</h4>
-                        <p className="text-slate-600 leading-relaxed whitespace-pre-line">{item.a}</p>
+                        <div className="text-slate-600 leading-relaxed whitespace-pre-line">{renderAnswer(item.a)}</div>
                       </div>
                     </div>
                     {iIdx < section.items.length - 1 && <div className="h-px bg-slate-100 mt-8"></div>}
